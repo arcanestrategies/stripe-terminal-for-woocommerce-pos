@@ -1,0 +1,5467 @@
+@charset "UTF-8";
+/*
+ * A partial implementation of the Ruby list functions from Compass:
+ * https://github.com/Compass/compass/blob/stable/lib/compass/sass_extensions/functions/lists.rb
+ */
+/*
+ * A partial implementation of the Ruby constants functions from Compass:
+ * https://github.com/Compass/compass/blob/stable/lib/compass/sass_extensions/functions/constants.rb
+ */
+/*
+ * A partial implementation of the Ruby display functions from Compass:
+ * https://github.com/Compass/compass/blob/stable/core/lib/compass/core/sass_extensions/functions/display.rb
+ */
+/**
+ * Prefix with $namespace-prefix is exists
+ */
+/**
+ * Returns current module, with namespace prefix
+ */
+/**
+  * @name Palette
+  *
+  * @markup
+  *   <ul>
+  *     <li style="background-color:#607d8b">Primary #607d8b</li>
+  *     <li style="background-color:#607d8b">Primary #607d8b</li>
+  *     <li style="background-color:#607d8b">Primary #607d8b</li>
+  *     <li style="background-color:#607d8b">Primary #607d8b</li>
+  *     <li style="background-color:#607d8b">Primary #607d8b</li>
+  *   </ul>
+  */
+/**
+*
+* Material design color palettes.
+* see http://www.google.com/design/spec/style/color.html
+*
+**/
+/* ==========  Color Palettes  ========== */
+/* ==========  Used Palettes  ========== */
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS and IE text size adjust after device orientation change,
+ *    without disabling user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * Improve readability of focused elements when they are also in an
+ * active/hover state.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  box-sizing: content-box;
+  /* 2 */
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+@-moz-viewport {
+  width: device-width;
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+
+@-o-viewport {
+  width: device-width;
+}
+
+@-webkit-viewport {
+  width: device-width;
+}
+
+@viewport {
+  width: device-width;
+}
+
+html {
+  font-size: 12px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+@media (min-width: 544px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+body {
+  font-family: "Open Sans", Sans-Serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #212121;
+  background-color: #e8e5df;
+}
+
+/**
+ * @name Definition Lists
+ *
+ * @markup
+ *  <dl>
+ *    <dt>Title:</dt>
+ *    <dd>Data</dd>
+ *    <dt>Title:</dt>
+ *    <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</dd>
+ *  </dl>
+ */
+dl {
+  overflow: hidden;
+  *zoom: 1;
+  width: 100%;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+dl dt {
+  font-weight: normal;
+  float: left;
+  padding-right: 5px;
+  clear: left;
+  font-weight: 600;
+}
+
+dl dd {
+  float: left;
+  margin: 0;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+[role="button"] {
+  cursor: pointer;
+}
+
+table {
+  background-color: #fff;
+}
+
+th {
+  text-align: left;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: .3rem;
+}
+
+input,
+button,
+select,
+textarea {
+  margin: 0;
+  line-height: inherit;
+  border-radius: 0;
+  color: #212121;
+}
+
+textarea {
+  resize: vertical;
+}
+
+fieldset {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: .5rem;
+  font-size: 1.5rem;
+  line-height: inherit;
+}
+
+input[type="search"] {
+  box-sizing: inherit;
+  -webkit-appearance: none;
+}
+
+/**
+ * @name Floats
+ *
+ * @markup
+ *
+ */
+.clearfix {
+  overflow: hidden;
+  *zoom: 1;
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pull-right {
+  float: right !important;
+}
+
+.pull-left {
+  float: left !important;
+}
+
+/**
+ * @name Screenreaders
+ *
+ * @markup
+ *
+ */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.sr-only-focusable:active, .sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+}
+
+/**
+ * @name Hidden
+ *
+ * @markup
+ *
+ */
+[hidden] {
+  display: none !important;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.text-hide {
+  font: "0/0" a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+/**
+ * @name Borders
+ *
+ * @markup
+ *
+ */
+.no-border {
+  border: 0 !important;
+}
+
+/**
+ * @name Background
+ *
+ * @markup
+ *
+ */
+.bg-primary {
+  color: #fff;
+  background-color: #607d8b;
+}
+
+a.bg-primary:focus, a.bg-primary.pseudo-class-focus, a.bg-primary:hover, a.bg-primary.pseudo-class-hover {
+  background-color: #4b626d;
+}
+
+.bg-success {
+  color: #fff;
+  background-color: #4caf50;
+}
+
+a.bg-success:focus, a.bg-success.pseudo-class-focus, a.bg-success:hover, a.bg-success.pseudo-class-hover {
+  background-color: #3d8b40;
+}
+
+.bg-info {
+  color: #fff;
+  background-color: #03a9f4;
+}
+
+a.bg-info:focus, a.bg-info.pseudo-class-focus, a.bg-info:hover, a.bg-info.pseudo-class-hover {
+  background-color: #0286c2;
+}
+
+.bg-warning {
+  color: #fff;
+  background-color: #ff5722;
+}
+
+a.bg-warning:focus, a.bg-warning.pseudo-class-focus, a.bg-warning:hover, a.bg-warning.pseudo-class-hover {
+  background-color: #ee3900;
+}
+
+.bg-danger, .error-message {
+  color: #fff;
+  background-color: #f44336;
+}
+
+a.bg-danger:focus, a.error-message:focus, a.bg-danger.pseudo-class-focus, a.pseudo-class-focus.error-message, a.bg-danger:hover, a.error-message:hover, a.bg-danger.pseudo-class-hover, a.pseudo-class-hover.error-message {
+  background-color: #ea1c0d;
+}
+
+/**
+ *
+ */
+/**
+ * @name Header Spec
+ *
+ * @markup
+ *  <header id="header">
+ *    <div>
+ *      <div>
+ *        <a href="#777"><i class="icon-bars"></i> <span>Menu</span></a>
+ *      </div>
+ *      <h1>Title</h1>
+ *      <div>
+ *        <div class="dropdown open">
+ *          <a href="#777"><img src="http://0.gravatar.com/avatar/?s=20"> <span>Cashier Name</span></a>
+ *          <ul class="dropdown-menu">
+ *            <li class="dropdown-item"><a href="#777">Item 1</a></li>
+ *            <li class="dropdown-item"><a href="#777">Item 2</a></li>
+ *            <li class="dropdown-item"><a href="#777">Item 3</a></li>
+ *          </ul>
+ *        </div>
+ *      </div>
+ *    </div>
+ *  </header>
+ */
+#header {
+  color: rgba(255, 255, 255, 0.9);
+  background: #263238;
+}
+
+#header > div {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-shadow: compact(0 2px 5px rgba(0, 0, 0, 0.26), false, false, false, false, false, false, false, false, false);
+  -moz-box-shadow: compact(0 2px 5px rgba(0, 0, 0, 0.26), false, false, false, false, false, false, false, false, false);
+  box-shadow: compact(0 2px 5px rgba(0, 0, 0, 0.26), false, false, false, false, false, false, false, false, false);
+}
+
+#header > div > div {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+#header > div > div:last-of-type {
+  text-align: right;
+}
+
+#header > div > h1 {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: normal;
+  margin: 0;
+  padding: 0.6rem 0.6rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#header a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.6rem 0.6rem;
+}
+
+#header a:hover {
+  background-color: #566f7c;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+#header a span {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  #header a span {
+    display: inline-block;
+  }
+}
+
+/**
+     * @name One Column Page
+     *
+     * @markup
+     *   <main id="main">
+     *     <div>
+     *       <section>
+     *         <div class="panel">
+     *           <div class="panel-header">
+     *             <div>Header</div>
+     *           </div>
+     *           <div class="panel-body">
+     *             <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim quam sed lectus porta porttitor. Donec sit amet mi ante. Morbi facilisis massa ac pretium blandit. Donec auctor dolor eu laoreet imperdiet. Integer ac vestibulum sapien, at porttitor enim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed massa justo, ornare at mattis eget, tincidunt vel enim. Etiam eu tellus vel enim commodo posuere sit amet at mauris. Aliquam erat volutpat. Donec sit amet justo tristique, vulputate leo ut, porta mauris. Cras neque nisi, malesuada ac velit at, pulvinar pulvinar quam.</div>
+     *           </div>
+     *           <div class="panel-footer">
+     *             <div>Footer</div>
+     *           </div>
+     *         </div>
+     *       </section>
+     *     </div>
+     *   </main>
+     */
+#main {
+  position: absolute;
+  top: 38px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.3rem 0.3rem;
+}
+
+#main section {
+  padding: 0.3rem 0.3rem;
+}
+
+#main > div {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+#main > div > section {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  height: 100%;
+}
+
+.two-column #main {
+  top: 68px;
+}
+
+.two-column #main.left-active #right {
+  display: none;
+}
+
+.two-column #main.right-active #left {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .two-column #main {
+    top: 38px;
+  }
+  .two-column #main.left-active #right,
+  .two-column #main.right-active #left {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+/**
+     * @name Two Column Page
+     *
+     * @markup
+     *   <main id="main">
+     *     <div>
+     *       <section>
+     *         <div class="panel">
+     *           <div class="panel-header">
+     *             <div>Header</div>
+     *           </div>
+     *           <div class="panel-body">
+     *             <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim quam sed lectus porta porttitor. Donec sit amet mi ante. Morbi facilisis massa ac pretium blandit. Donec auctor dolor eu laoreet imperdiet. Integer ac vestibulum sapien, at porttitor enim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed massa justo, ornare at mattis eget, tincidunt vel enim. Etiam eu tellus vel enim commodo posuere sit amet at mauris. Aliquam erat volutpat. Donec sit amet justo tristique, vulputate leo ut, porta mauris. Cras neque nisi, malesuada ac velit at, pulvinar pulvinar quam.</div>
+     *             <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim quam sed lectus porta porttitor. Donec sit amet mi ante. Morbi facilisis massa ac pretium blandit. Donec auctor dolor eu laoreet imperdiet. Integer ac vestibulum sapien, at porttitor enim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed massa justo, ornare at mattis eget, tincidunt vel enim. Etiam eu tellus vel enim commodo posuere sit amet at mauris. Aliquam erat volutpat. Donec sit amet justo tristique, vulputate leo ut, porta mauris. Cras neque nisi, malesuada ac velit at, pulvinar pulvinar quam.</div>
+     *           </div>
+     *           <div class="panel-footer">
+     *             <div>Footer</div>
+     *           </div>
+     *         </div>
+     *       </section>
+     *       <section>
+     *         <div class="panel">
+     *           <div class="panel-header">
+     *             <div>Header</div>
+     *           </div>
+     *           <div class="panel-body">
+     *             <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim quam sed lectus porta porttitor. Donec sit amet mi ante. Morbi facilisis massa ac pretium blandit. Donec auctor dolor eu laoreet imperdiet. Integer ac vestibulum sapien, at porttitor enim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed massa justo, ornare at mattis eget, tincidunt vel enim. Etiam eu tellus vel enim commodo posuere sit amet at mauris. Aliquam erat volutpat. Donec sit amet justo tristique, vulputate leo ut, porta mauris. Cras neque nisi, malesuada ac velit at, pulvinar pulvinar quam.</div>
+     *           </div>
+     *           <div class="panel-footer">
+     *             <div>Footer</div>
+     *           </div>
+     *         </div>
+     *       </section>
+     *     </div>
+     *   </main>
+     */
+/**
+ * @name Menu Spec
+ *
+ * @markup
+ *  <div class="menu-open">
+ *    <nav id="menu">
+ *      <ul>
+ *        <li><a href="#777"><i class="icon-woocommerce-pos icon-lg"></i> Item</a></li>
+ *        <li><a href="#777"><i class="icon-products icon-lg"></i> Item</a></li>
+ *        <li class="support"><a href="#777"><i class="icon-support icon-lg"></i> Item</a></li>
+ *        <li><a href="#777"><i class="icon-wordpress icon-lg"></i> Item</a></li>
+ *      </ul>
+ *    </nav>
+ *  </div>
+ */
+#menu {
+  width: 200px;
+  background: #263238;
+  position: fixed;
+  height: 100%;
+  top: 0;
+  z-index: 9999;
+  -webkit-box-shadow: compact(inset -10px 0 6px -9px rgba(0, 0, 0, 0.7), false, false, false, false, false, false, false, false, false);
+  -moz-box-shadow: compact(inset -10px 0 6px -9px rgba(0, 0, 0, 0.7), false, false, false, false, false, false, false, false, false);
+  box-shadow: compact(inset -10px 0 6px -9px rgba(0, 0, 0, 0.7), false, false, false, false, false, false, false, false, false);
+  -webkit-transform: translate3d(-200px, 0, 0);
+  -moz-transform: translate3d(-200px, 0, 0);
+  -ms-transform: translate3d(-200px, 0, 0);
+  -o-transform: translate3d(-200px, 0, 0);
+  transform: translate3d(-200px, 0, 0);
+  -webkit-transition: compact(compact(transform 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99), false, false, false, false, false, false, false, false, false) false false);
+  -moz-transition: compact(compact(transform 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99), false, false, false, false, false, false, false, false, false) false false false);
+  -o-transition: compact(compact(transform 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99), false, false, false, false, false, false, false, false, false) false false false);
+  transition: compact(transform 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99), false, false, false, false, false, false, false, false, false);
+}
+
+#menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#menu ul li {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#menu ul li a {
+  display: block;
+  color: rgba(255, 255, 255, 0.9);
+  padding: 0.6rem 0.6rem;
+  text-decoration: none;
+}
+
+#menu ul li a:hover {
+  background-color: #566f7c;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+#menu ul li a i {
+  margin-right: 0.6rem;
+}
+
+#menu ul li.support a {
+  color: #e64a19;
+}
+
+#menu ul li.support a:hover {
+  color: rgba(255, 255, 255, 0.9);
+  background-color: #e64a19;
+}
+
+#menu ul li:first-of-type {
+  border: 0;
+}
+
+.menu-open #menu {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.woocommerce_stripe_terminal_reader_init {
+  outline: 0 !important;
+}
+
+.woocommerce_stripe_terminal_reader_init.selected {
+  border: 3px solid #4caf50 !important;
+}
+
+/**
+  * @name Button Group Spec
+  *
+  * @markup
+  * <div class="btn-group" role="group" aria-label="Basic example">
+  *   <button type="button" class="btn">Left</button>
+  *   <button type="button" class="btn">Middle</button>
+  *   <button type="button" class="btn">Right</button>
+  * </div>
+  */
+.btn-group {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.btn-group > .btn {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+  border-radius: 0;
+}
+
+.btn-group > .btn:first-child {
+  margin-left: 0;
+}
+
+.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
+  -moz-border-radius-topright: 0;
+  -webkit-border-top-right-radius: 0;
+  border-top-right-radius: 0;
+  -moz-border-radius-bottomright: 0;
+  -webkit-border-bottom-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.btn-group > .btn:last-child:not(:first-child) {
+  -moz-border-radius-topleft: 0;
+  -webkit-border-top-left-radius: 0;
+  border-top-left-radius: 0;
+  -moz-border-radius-bottomleft: 0;
+  -webkit-border-bottom-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.btn-group .btn + .btn,
+.btn-group .btn + .btn-group,
+.btn-group .btn-group + .btn,
+.btn-group .btn-group + .btn-group {
+  margin-left: -1px;
+}
+
+.btn-group-toggle:not(.toggle) span:first-of-type .btn {
+  cursor: not-allowed;
+  pointer-events: none;
+  color: #212121;
+  background: #e8e8e8;
+}
+
+.btn-group-toggle:not(.toggle) span:first-of-type .btn:focus {
+  background: #e8e8e8;
+}
+
+.btn-group-toggle.toggle span:last-of-type .btn {
+  cursor: not-allowed;
+  pointer-events: none;
+  color: #212121;
+  background: #e8e8e8;
+}
+
+.btn-group-toggle.toggle span:last-of-type .btn:focus {
+  background: #e8e8e8;
+}
+
+/**
+  * @name Standard Buttons
+  *
+  * @state :hover - Hover state
+  * @state :active - Active state
+  * @state :focus - Focus state
+  * @state .pseudo-class-active pseudo-class-focus - Active Focus state
+  * @state .disabled - Disabled state
+  *
+  * @markup
+  *   <button class="btn">Default</button>
+  *   <button class="btn btn-primary">Primary</button>
+  *   <button class="btn btn-secondary">Secondary</button>
+  *   <button class="btn btn-success">Success</button>
+  *   <button class="btn btn-info">Info</button>
+  *   <button class="btn btn-warning">Warning</button>
+  *   <button class="btn btn-danger">Danger</button>
+  */
+.btn {
+  -webkit-transition-property: compact(all, false, false, false, false, false, false, false, false, false);
+  -moz-transition-property: compact(all, false, false, false, false, false, false, false, false, false);
+  -o-transition-property: compact(all, false, false, false, false, false, false, false, false, false);
+  transition-property: compact(all, false, false, false, false, false, false, false, false, false);
+  -webkit-transition-duration: compact(0.2s, false, false, false, false, false, false, false, false, false);
+  -moz-transition-duration: compact(0.2s, false, false, false, false, false, false, false, false, false);
+  -o-transition-duration: compact(0.2s, false, false, false, false, false, false, false, false, false);
+  transition-duration: compact(0.2s, false, false, false, false, false, false, false, false, false);
+  -webkit-transition-timing-function: compact(ease-in-out, false, false, false, false, false, false, false, false, false);
+  -moz-transition-timing-function: compact(ease-in-out, false, false, false, false, false, false, false, false, false);
+  -o-transition-timing-function: compact(ease-in-out, false, false, false, false, false, false, false, false, false);
+  transition-timing-function: compact(ease-in-out, false, false, false, false, false, false, false, false, false);
+  color: #212121;
+  background-color: #fafafa;
+  border-color: #dbdbdb;
+  -webkit-box-shadow: compact(inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), false, false, false, false, false, false, false, false);
+  -moz-box-shadow: compact(inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), false, false, false, false, false, false, false, false);
+  box-shadow: compact(inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), false, false, false, false, false, false, false, false);
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  background-color: #fafafa;
+  border: 1px solid #dbdbdb;
+  white-space: nowrap;
+  padding: 0.3rem 0.6rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  text-decoration: none;
+}
+
+.btn:hover, .btn.pseudo-class-hover {
+  color: #212121;
+  background-color: #e1e0e0;
+  border-color: #bdbdbd;
+}
+
+.btn:focus, .btn.pseudo-class-focus {
+  color: #212121;
+  background-color: #e1e0e0;
+  border-color: #bdbdbd;
+}
+
+.btn:active, .btn.pseudo-class-active,
+.open > .btn.dropdown-toggle {
+  color: #212121;
+  background-color: #e1e0e0;
+  border-color: #bdbdbd;
+  background-image: none;
+  -webkit-box-shadow: compact(inset 0 3px 5px rgba(0, 0, 0, 0.125), false, false, false, false, false, false, false, false, false);
+  -moz-box-shadow: compact(inset 0 3px 5px rgba(0, 0, 0, 0.125), false, false, false, false, false, false, false, false, false);
+  box-shadow: compact(inset 0 3px 5px rgba(0, 0, 0, 0.125), false, false, false, false, false, false, false, false, false);
+}
+
+.btn:active:hover,
+.btn:active.pseudo-class-hover .btn:active:focus, .btn:active.pseudo-class-focus, .btn.pseudo-class-active:hover,
+.btn.pseudo-class-active.pseudo-class-hover .btn:active:focus, .btn.pseudo-class-active.pseudo-class-focus,
+.open > .btn.dropdown-toggle:hover,
+.open >
+.btn.dropdown-toggle.pseudo-class-hover .btn:active:focus,
+.open > .btn.dropdown-toggle.pseudo-class-focus,
+.btn:active.pseudo-class-hover .btn.pseudo-class-active:focus,
+.btn.pseudo-class-active.pseudo-class-hover .btn.pseudo-class-active:focus,
+.open >
+.btn.dropdown-toggle.pseudo-class-hover .btn.pseudo-class-active:focus,
+.btn:active.pseudo-class-hover
+.open > .btn.dropdown-toggle:focus,
+.btn.pseudo-class-active.pseudo-class-hover
+.open > .btn.dropdown-toggle:focus,
+.open >
+.btn.dropdown-toggle.pseudo-class-hover
+.open > .btn.dropdown-toggle:focus {
+  color: #212121;
+  background-color: #cfcfcf;
+  border-color: #9c9c9c;
+}
+
+.btn.disabled:focus, .btn.disabled.pseudo-class-focus, .btn:disabled:focus, .btn:disabled.pseudo-class-focus {
+  background-color: #fafafa;
+  border-color: #dbdbdb;
+}
+
+.btn.disabled:hover, .btn.disabled.pseudo-class-hover, .btn:disabled:hover, .btn:disabled.pseudo-class-hover {
+  background-color: #fafafa;
+  border-color: #dbdbdb;
+}
+
+.btn:focus, .btn.pseudo-class-focus, .btn:active:focus, .btn:active.pseudo-class-focus, .btn.active:focus, .btn.active.pseudo-class-focus, .btn.pseudo-class-active:focus, .btn.pseudo-class-active.pseudo-class-focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+.btn:hover, .btn.hover, .btn.pseudo-class-hover, .btn:focus,
+.btn.focus .btn.pseudo-class-focus {
+  color: #212121;
+  text-decoration: none;
+}
+
+.btn:active, .btn.active, .btn.pseudo-class-active {
+  outline: 0;
+  background-image: none;
+  -webkit-box-shadow: compact(inset 0 3px 5px rgba(0, 0, 0, 0.125), false, false, false, false, false, false, false, false, false);
+  -moz-box-shadow: compact(inset 0 3px 5px rgba(0, 0, 0, 0.125), false, false, false, false, false, false, false, false, false);
+  box-shadow: compact(inset 0 3px 5px rgba(0, 0, 0, 0.125), false, false, false, false, false, false, false, false, false);
+}
+
+.btn.disabled, .btn[disabled],
+fieldset[disabled] .btn {
+  cursor: not-allowed;
+  pointer-events: none;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=65);
+  opacity: 0.65;
+  -webkit-box-shadow: compact(none, false, false, false, false, false, false, false, false, false);
+  -moz-box-shadow: compact(none, false, false, false, false, false, false, false, false, false);
+  box-shadow: compact(none, false, false, false, false, false, false, false, false, false);
+}
+
+/**
+     * Modifiers
+     */
+.btn-primary {
+  color: #fff;
+  background-color: #607d8b;
+  border-color: #607d8b;
+  -webkit-box-shadow: compact(inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), false, false, false, false, false, false, false, false);
+  -moz-box-shadow: compact(inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), false, false, false, false, false, false, false, false);
+  box-shadow: compact(inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), false, false, false, false, false, false, false, false);
+}
+
+.btn-primary:hover, .btn-primary.pseudo-class-hover {
+  color: #fff;
+  background-color: #4b626d;
+  border-color: #475c67;
+}
+
+.btn-primary:focus, .btn-primary.pseudo-class-focus {
+  color: #fff;
+  background-color: #4b626d;
+  border-color: #475c67;
+}
+
+.btn-primary:active, .btn-primary.pseudo-class-active,
+.open > .btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: #4b626d;
+  border-color: #475c67;
+  background-image: none;
+  -webkit-box-shadow: compact(inset 0 3px 5px rgba(0, 0, 0, 0.125), false, false, false, false, false, false, false, false, false);
+  -moz-box-shadow: compact(inset 0 3px 5px rgba(0, 0, 0, 0.125), false, false, false, false, false, false, false, false, false);
+  box-shadow: compact(inset 0 3px 5px rgba(0, 0, 0, 0.125), false, false, false, false, false, false, false, false, false);
+}
+
+.btn-primary:active:hover,
+.btn-primary:active.pseudo-class-hover .btn-primary:active:focus, .btn-primary:active.pseudo-class-focus, .btn-primary.pseudo-class-active:hover,
+.btn-primary.pseudo-class-active.pseudo-class-hover .btn-primary:active:focus, .btn-primary.pseudo-class-active.pseudo-class-focus,
+.open > .btn-primary.dropdown-toggle:hover,
+.open >
+.btn-primary.dropdown-toggle.pseudo-class-hover .btn-primary:active:focus,
+.open > .btn-primary.dropdown-toggle.pseudo-class-focus,
+.btn-primary:active.pseudo-class-hover .btn-primary.pseudo-class-active:focus,
+.btn-primary.pseudo-class-active.pseudo-class-hover .btn-primary.pseudo-class-active:focus,
+.open >
+.btn-primary.dropdown-toggle.pseudo-class-hover .btn-primary.pseudo-class-active:focus,
+.btn-primary:active.pseudo-class-hover
+.open > .btn-primary.dropdown-toggle:focus,
+.btn-primary.pseudo-class-active.pseudo-class-hover
+.open > .btn-primary.dropdown-toggle:focus,
+.open >
+.btn-primary.dropdown-toggle.pseudo-class-hover
+.open > .btn-primary.dropdown-toggle:focus {
+  color: #fff;
+  background-color: #3d4f58;
+  border-color: #2c3940;
+}
+
+.btn-primary.disabled:focus, .btn-primary.disabled.pseudo-class-focus, .btn-primary:disabled:focus, .btn-primary:disabled.pseudo-class-focus {
+  background-color: #607d8b;
+  border-color: #607d8b;
+}
+
+.btn-primary.disabled:hover, .btn-primary.disabled.pseudo-class-hover, .btn-primary:disabled:hover, .btn-primary:disabled.pseudo-class-hover {
+  background-color: #607d8b;
+  border-color: #607d8b;
+}
+
+.btn-secondary {
+  color: #607d8b;
+  background-color: #dbdbdb;
+  border-color: #dbdbdb;
+  -webkit-box-shadow: compact(inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), false, false, false, false, false, false, false, false);
+  -moz-box-shadow: compact(inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), false, false, false, false, false, false, false, false);
+  box-shadow: compact(inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), false, false, false, false, false, false, false, false);
+}
+
+.btn-secondary:hover, .btn-secondary.pseudo-class-hover {
+  color: #607d8b;
+  background-color: #c2c2c2;
+  border-color: #bdbdbd;
+}
+
+.btn-secondary:focus, .btn-secondary.pseudo-class-focus {
+  color: #607d8b;
+  background-color: #c2c2c2;
+  border-color: #bdbdbd;
+}
+
+.btn-secondary:active, .btn-secondary.pseudo-class-active,
+.open > .btn-secondary.dropdown-toggle {
+  color: #607d8b;
+  background-color: #c2c2c2;
+  border-color: #bdbdbd;
+  background-image: none;
+  -webkit-box-shadow: compact(inset 0 3px 5px rgba(0, 0, 0, 0.125), false, false, false, false, false, false, false, false, false);
+  -moz-box-shadow: compact(inset 0 3px 5px rgba(0, 0, 0, 0.125), false, false, false, false, false, false, false, false, false);
+  box-shadow: compact(inset 0 3px 5px rgba(0, 0, 0, 0.125), false, false, false, false, false, false, false, false, false);
+}
+
+.btn-secondary:active:hover,
+.btn-secondary:active.pseudo-class-hover .btn-secondary:active:focus, .btn-secondary:active.pseudo-class-focus, .btn-secondary.pseudo-class-active:hover,
+.btn-secondary.pseudo-class-active.pseudo-class-hover .btn-secondary:active:focus, .btn-secondary.pseudo-class-active.pseudo-class-focus,
+.open > .btn-secondary.dropdown-toggle:hover,
+.open >
+.btn-secondary.dropdown-toggle.pseudo-class-hover .btn-secondary:active:focus,
+.open > .btn-secondary.dropdown-toggle.pseudo-class-focus,
+.btn-secondary:active.pseudo-class-hover .btn-secondary.pseudo-class-active:focus,
+.btn-secondary.pseudo-class-active.pseudo-class-hover .btn-secondary.pseudo-class-active:focus,
+.open >
+.btn-secondary.dropdown-toggle.pseudo-class-hover .btn-secondary.pseudo-class-active:focus,
+.btn-secondary:active.pseudo-class-hover
+.open > .btn-secondary.dropdown-toggle:focus,
+.btn-secondary.pseudo-class-active.pseudo-class-hover
+.open > .btn-secondary.dropdown-toggle:focus,
+.open >
+.btn-secondary.dropdown-toggle.pseudo-class-hover
+.open > .btn-secondary.dropdown-toggle:focus {
+  color: #607d8b;
+  background-color: #b0b0b0;
+  border-color: #9c9c9c;
+}
+
+.btn-secondary.disabled:focus, .btn-secondary.disabled.pseudo-class-focus, .btn-secondary:disabled:focus, .btn-secondary:disabled.pseudo-class-focus {
+  background-color: #dbdbdb;
+  border-color: #dbdbdb;
+}
+
+.btn-secondary.disabled:hover, .btn-secondary.disabled.pseudo-class-hover, .btn-secondary:disabled:hover, .btn-secondary:disabled.pseudo-class-hover {
+  background-color: #dbdbdb;
+  border-color: #dbdbdb;
+}
+
+.btn-success {
+  color: #fff;
+  background-color: #4caf50;
+  border-color: #4caf50;
+  -webkit-box-shadow: compact(inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), false, false, false, false, false, false, false, false);
+  -moz-box-shadow: compact(inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), false, false, false, false, false, false, false, false);
+  box-shadow: compact(inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), false, false, false, false, false, false, false, false);
+}
+
+.btn-success:hover, .btn-success.pseudo-class-hover {
+  color: #fff;
+  background-color: #3d8b40;
+  border-color: #39843c;
+}
+
+.btn-success:focus, .btn-success.pseudo-class-focus {
+  color: #fff;
+  background-color: #3d8b40;
+  border-color: #39843c;
+}
+
+.btn-success:active, .btn-success.pseudo-class-active,
+.open > .btn-success.dropdown-toggle {
+  color: #fff;
+  background-color: #3d8b40;
+  border-color: #39843c;
+  background-image: none;
+  -webkit-box-shadow: compact(inset 0 3px 5px rgba(0, 0, 0, 0.125), false, false, false, false, false, false, false, false, false);
+  -moz-box-shadow: compact(inset 0 3px 5px rgba(0, 0, 0, 0.125), false, false, false, false, false, false, false, false, false);
+  box-shadow: compact(inset 0 3px 5px rgba(0, 0, 0, 0.125), false, false, false, false, false, false, false, false, false);
+}
+
+.btn-success:active:hover,
+.btn-success:active.pseudo-class-hover .btn-success:active:focus, .btn-success:active.pseudo-class-focus, .btn-success.pseudo-class-active:hover,
+.btn-success.pseudo-class-active.pseudo-class-hover .btn-success:active:focus, .btn-success.pseudo-class-active.pseudo-class-focus,
+.open > .btn-success.dropdown-toggle:hover,
+.open >
+.btn-success.dropdown-toggle.pseudo-class-hover .btn-success:active:focus,
+.open > .btn-success.dropdown-toggle.pseudo-class-focus,
+.btn-success:active.pseudo-class-hover .btn-success.pseudo-class-active:focus,
+.btn-success.pseudo-class-active.pseudo-class-hover .btn-success.pseudo-class-active:focus,
+.open >
+.btn-success.dropdown-toggle.pseudo-class-hover .btn-success.pseudo-class-active:focus,
+.btn-success:active.pseudo-class-hover
+.open > .btn-success.dropdown-toggle:focus,
+.btn-success.pseudo-class-active.pseudo-class-hover
+.open > .btn-success.dropdown-toggle:focus,
+.open >
+.btn-success.dropdown-toggle.pseudo-class-hover
+.open > .btn-success.dropdown-toggle:focus {
+  color: #fff;
+  background-color: #327334;
+  border-color: #255627;
+}
+
+.btn-success.disabled:focus, .btn-success.disabled.pseudo-class-focus, .btn-success:disabled:focus, .btn-success:disabled.pseudo-class-focus {
+  background-color: #4caf50;
+  border-color: #4caf50;
+}
+
+.btn-success.disabled:hover, .btn-success.disabled.pseudo-class-hover, .btn-success:disabled:hover, .btn-success:disabled.pseudo-class-hover {
+  background-color: #4caf50;
+  border-color: #4caf50;
+}
+
+.btn-info {
+  color: #fff;
+  background-color: #03a9f4;
+  border-color: #03a9f4;
+  -webkit-box-shadow: compact(inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), false, false, false, false, false, false, false, false);
+  -moz-box-shadow: compact(inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), false, false, false, false, false, false, false, false);
+  box-shadow: compact(inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), false, false, false, false, false, false, false, false);
+}
+
+.btn-info:hover, .btn-info.pseudo-class-hover {
+  color: #fff;
+  background-color: #0286c2;
+  border-color: #027fb8;
+}
+
+.btn-info:focus, .btn-info.pseudo-class-focus {
+  color: #fff;
+  background-color: #0286c2;
+  border-color: #027fb8;
+}
+
+.btn-info:active, .btn-info.pseudo-class-active,
+.open > .btn-info.dropdown-toggle {
+  color: #fff;
+  background-color: #0286c2;
+  border-color: #027fb8;
+  background-image: none;
+  -webkit-box-shadow: compact(inset 0 3px 5px rgba(0, 0, 0, 0.125), false, false, false, false, false, false, false, false, false);
+  -moz-box-shadow: compact(inset 0 3px 5px rgba(0, 0, 0, 0.125), false, false, false, false, false, false, false, false, false);
+  box-shadow: compact(inset 0 3px 5px rgba(0, 0, 0, 0.125), false, false, false, false, false, false, false, false, false);
+}
+
+.btn-info:active:hover,
+.btn-info:active.pseudo-class-hover .btn-info:active:focus, .btn-info:active.pseudo-class-focus, .btn-info.pseudo-class-active:hover,
+.btn-info.pseudo-class-active.pseudo-class-hover .btn-info:active:focus, .btn-info.pseudo-class-active.pseudo-class-focus,
+.open > .btn-info.dropdown-toggle:hover,
+.open >
+.btn-info.dropdown-toggle.pseudo-class-hover .btn-info:active:focus,
+.open > .btn-info.dropdown-toggle.pseudo-class-focus,
+.btn-info:active.pseudo-class-hover .btn-info.pseudo-class-active:focus,
+.btn-info.pseudo-class-active.pseudo-class-hover .btn-info.pseudo-class-active:focus,
+.open >
+.btn-info.dropdown-toggle.pseudo-class-hover .btn-info.pseudo-class-active:focus,
+.btn-info:active.pseudo-class-hover
+.open > .btn-info.dropdown-toggle:focus,
+.btn-info.pseudo-class-active.pseudo-class-hover
+.open > .btn-info.dropdown-toggle:focus,
+.open >
+.btn-info.dropdown-toggle.pseudo-class-hover
+.open > .btn-info.dropdown-toggle:focus {
+  color: #fff;
+  background-color: #026e9e;
+  border-color: #015276;
+}
+
+.btn-info.disabled:focus, .btn-info.disabled.pseudo-class-focus, .btn-info:disabled:focus, .btn-info:disabled.pseudo-class-focus {
+  background-color: #03a9f4;
+  border-color: #03a9f4;
+}
+
+.btn-info.disabled:hover, .btn-info.disabled.pseudo-class-hover, .btn-info:disabled:hover, .btn-info:disabled.pseudo-class-hover {
+  background-color: #03a9f4;
+  border-color: #03a9f4;
+}
+
+.btn-warning {
+  color: #fff;
+  background-color: #ff5722;
+  border-color: #ff5722;
+  -webkit-box-shadow: compact(inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), false, false, false, false, false, false, false, false);
+  -moz-box-shadow: compact(inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), false, false, false, false, false, false, false, false);
+  box-shadow: compact(inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), false, false, false, false, false, false, false, false);
+}
+
+.btn-warning:hover, .btn-warning.pseudo-class-hover {
+  color: #fff;
+  background-color: #ee3900;
+  border-color: #e43700;
+}
+
+.btn-warning:focus, .btn-warning.pseudo-class-focus {
+  color: #fff;
+  background-color: #ee3900;
+  border-color: #e43700;
+}
+
+.btn-warning:active, .btn-warning.pseudo-class-active,
+.open > .btn-warning.dropdown-toggle {
+  color: #fff;
+  background-color: #ee3900;
+  border-color: #e43700;
+  background-image: none;
+  -webkit-box-shadow: compact(inset 0 3px 5px rgba(0, 0, 0, 0.125), false, false, false, false, false, false, false, false, false);
+  -moz-box-shadow: compact(inset 0 3px 5px rgba(0, 0, 0, 0.125), false, false, false, false, false, false, false, false, false);
+  box-shadow: compact(inset 0 3px 5px rgba(0, 0, 0, 0.125), false, false, false, false, false, false, false, false, false);
+}
+
+.btn-warning:active:hover,
+.btn-warning:active.pseudo-class-hover .btn-warning:active:focus, .btn-warning:active.pseudo-class-focus, .btn-warning.pseudo-class-active:hover,
+.btn-warning.pseudo-class-active.pseudo-class-hover .btn-warning:active:focus, .btn-warning.pseudo-class-active.pseudo-class-focus,
+.open > .btn-warning.dropdown-toggle:hover,
+.open >
+.btn-warning.dropdown-toggle.pseudo-class-hover .btn-warning:active:focus,
+.open > .btn-warning.dropdown-toggle.pseudo-class-focus,
+.btn-warning:active.pseudo-class-hover .btn-warning.pseudo-class-active:focus,
+.btn-warning.pseudo-class-active.pseudo-class-hover .btn-warning.pseudo-class-active:focus,
+.open >
+.btn-warning.dropdown-toggle.pseudo-class-hover .btn-warning.pseudo-class-active:focus,
+.btn-warning:active.pseudo-class-hover
+.open > .btn-warning.dropdown-toggle:focus,
+.btn-warning.pseudo-class-active.pseudo-class-hover
+.open > .btn-warning.dropdown-toggle:focus,
+.open >
+.btn-warning.dropdown-toggle.pseudo-class-hover
+.open > .btn-warning.dropdown-toggle:focus {
+  color: #fff;
+  background-color: #ca3100;
+  border-color: #a22700;
+}
+
+.btn-warning.disabled:focus, .btn-warning.disabled.pseudo-class-focus, .btn-warning:disabled:focus, .btn-warning:disabled.pseudo-class-focus {
+  background-color: #ff5722;
+  border-color: #ff5722;
+}
+
+.btn-warning.disabled:hover, .btn-warning.disabled.pseudo-class-hover, .btn-warning:disabled:hover, .btn-warning:disabled.pseudo-class-hover {
+  background-color: #ff5722;
+  border-color: #ff5722;
+}
+
+.btn-danger {
+  color: #fff;
+  background-color: #f44336;
+  border-color: #f44336;
+  -webkit-box-shadow: compact(inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), false, false, false, false, false, false, false, false);
+  -moz-box-shadow: compact(inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), false, false, false, false, false, false, false, false);
+  box-shadow: compact(inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), false, false, false, false, false, false, false, false);
+}
+
+.btn-danger:hover, .btn-danger.pseudo-class-hover {
+  color: #fff;
+  background-color: #ea1c0d;
+  border-color: #e11b0c;
+}
+
+.btn-danger:focus, .btn-danger.pseudo-class-focus {
+  color: #fff;
+  background-color: #ea1c0d;
+  border-color: #e11b0c;
+}
+
+.btn-danger:active, .btn-danger.pseudo-class-active,
+.open > .btn-danger.dropdown-toggle {
+  color: #fff;
+  background-color: #ea1c0d;
+  border-color: #e11b0c;
+  background-image: none;
+  -webkit-box-shadow: compact(inset 0 3px 5px rgba(0, 0, 0, 0.125), false, false, false, false, false, false, false, false, false);
+  -moz-box-shadow: compact(inset 0 3px 5px rgba(0, 0, 0, 0.125), false, false, false, false, false, false, false, false, false);
+  box-shadow: compact(inset 0 3px 5px rgba(0, 0, 0, 0.125), false, false, false, false, false, false, false, false, false);
+}
+
+.btn-danger:active:hover,
+.btn-danger:active.pseudo-class-hover .btn-danger:active:focus, .btn-danger:active.pseudo-class-focus, .btn-danger.pseudo-class-active:hover,
+.btn-danger.pseudo-class-active.pseudo-class-hover .btn-danger:active:focus, .btn-danger.pseudo-class-active.pseudo-class-focus,
+.open > .btn-danger.dropdown-toggle:hover,
+.open >
+.btn-danger.dropdown-toggle.pseudo-class-hover .btn-danger:active:focus,
+.open > .btn-danger.dropdown-toggle.pseudo-class-focus,
+.btn-danger:active.pseudo-class-hover .btn-danger.pseudo-class-active:focus,
+.btn-danger.pseudo-class-active.pseudo-class-hover .btn-danger.pseudo-class-active:focus,
+.open >
+.btn-danger.dropdown-toggle.pseudo-class-hover .btn-danger.pseudo-class-active:focus,
+.btn-danger:active.pseudo-class-hover
+.open > .btn-danger.dropdown-toggle:focus,
+.btn-danger.pseudo-class-active.pseudo-class-hover
+.open > .btn-danger.dropdown-toggle:focus,
+.open >
+.btn-danger.dropdown-toggle.pseudo-class-hover
+.open > .btn-danger.dropdown-toggle:focus {
+  color: #fff;
+  background-color: #c8180b;
+  border-color: #a21309;
+}
+
+.btn-danger.disabled:focus, .btn-danger.disabled.pseudo-class-focus, .btn-danger:disabled:focus, .btn-danger:disabled.pseudo-class-focus {
+  background-color: #f44336;
+  border-color: #f44336;
+}
+
+.btn-danger.disabled:hover, .btn-danger.disabled.pseudo-class-hover, .btn-danger:disabled:hover, .btn-danger:disabled.pseudo-class-hover {
+  background-color: #f44336;
+  border-color: #f44336;
+}
+
+/**
+     * @name Circle Buttons
+     *
+     * @state .btn-circle-sm - Small buttons
+     *
+     * @markup
+     *   <button class="btn btn-circle">+</button>
+     *   <button class="btn btn-circle btn-primary">+</button>
+     *   <button class="btn btn-circle btn-secondary">+</button>
+     *   <button class="btn btn-circle btn-success">+</button>
+     *   <button class="btn btn-circle btn-info">+</button>
+     *   <button class="btn btn-circle btn-warning">+</button>
+     *   <button class="btn btn-circle btn-danger">+</button>
+     */
+.btn-circle {
+  -webkit-border-radius: 18px;
+  -moz-border-radius: 18px;
+  -ms-border-radius: 18px;
+  -o-border-radius: 18px;
+  border-radius: 18px;
+  padding: 0px;
+  width: 36px;
+  height: 36px;
+  line-height: 34px;
+}
+
+.btn-circle-sm {
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  border-radius: 11px;
+  padding: 0px;
+  width: 22px;
+  height: 22px;
+  line-height: 20px;
+}
+
+/**
+  * @name CSS Fade Animations
+  *
+  * @state .css-fade-in-10 - 10 second Fade In state
+  * @state .css-fade-out-10 - 10 second Fade Out state
+  *
+  * @markup
+  *   <div>This is some text</div>
+  */
+.css-fade-in-10 {
+  -webkit-animation: fadeIn 10s 1 linear;
+  -moz-animation: fadeIn 10s 1 linear;
+  -ms-animation: fadeIn 10s 1 linear;
+  -o-animation: fadeIn 10s 1 linear;
+  animation: fadeIn 10s 1 linear;
+  opacity: 1;
+}
+
+.css-fade-out-10 {
+  -webkit-animation: fadeOut 10s 1 linear;
+  -moz-animation: fadeOut 10s 1 linear;
+  -ms-animation: fadeOut 10s 1 linear;
+  -o-animation: fadeOut 10s 1 linear;
+  animation: fadeOut 10s 1 linear;
+  opacity: 0;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/**
+ * @name Checkboxes and radios
+ *
+ * @description Base class takes care of all the key behavioral aspects.
+ *
+ * @markup
+<label class="c-input c-checkbox">
+  <input type="checkbox">
+  <span class="c-indicator"></span>
+  Check this custom checkbox
+</label>
+
+<label class="c-input c-radio">
+  <input id="radio1" name="radio" type="radio">
+  <span class="c-indicator"></span>
+  Toggle this custom radio
+</label>
+<label class="c-input c-radio">
+  <input id="radio2" name="radio" type="radio">
+  <span class="c-indicator"></span>
+  Or toggle this other custom radio
+</label>
+ */
+.c-input {
+  position: relative;
+  display: inline;
+  padding-left: 1.5rem;
+  color: #555;
+  cursor: pointer;
+}
+
+.c-input > input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.c-input > input:checked ~ .c-indicator {
+  color: #fff;
+  background-color: #455a64;
+  -webkit-box-shadow: compact(none, false, false, false, false, false, false, false, false, false);
+  -moz-box-shadow: compact(none, false, false, false, false, false, false, false, false, false);
+  box-shadow: compact(none, false, false, false, false, false, false, false, false, false);
+}
+
+.c-input > input:focus ~ .c-indicator {
+  border-color: #66afe9;
+  outline: none;
+  -webkit-box-shadow: compact(inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6), false, false, false, false, false, false, false, false, false);
+  -moz-box-shadow: compact(inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6), false, false, false, false, false, false, false, false, false);
+  box-shadow: compact(inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6), false, false, false, false, false, false, false, false, false);
+}
+
+.c-input > input:active ~ .c-indicator {
+  color: #fff;
+  background-color: #607d8b;
+  -webkit-box-shadow: compact(none, false, false, false, false, false, false, false, false, false);
+  -moz-box-shadow: compact(none, false, false, false, false, false, false, false, false, false);
+  box-shadow: compact(none, false, false, false, false, false, false, false, false, false);
+}
+
+.c-input + .c-input {
+  margin-left: 1rem;
+}
+
+/**
+     * @name Custom indicator
+     *
+     * @description Generates a shadow element to create our makeshift checkbox/radio background.
+     *
+     * @markup
+     *   <span class="c-indicator"></span>
+     */
+.c-indicator {
+  position: absolute;
+  top: 0.2rem;
+  left: 0;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  user-select: none;
+  background-color: #eee;
+  background-repeat: no-repeat;
+  background-position: 50% 40%;
+  background-size: 75% 75%;
+  -webkit-box-shadow: compact(inset 0 0.125rem 0.125rem rgba(0, 0, 0, 0.1), false, false, false, false, false, false, false, false, false);
+  -moz-box-shadow: compact(inset 0 0.125rem 0.125rem rgba(0, 0, 0, 0.1), false, false, false, false, false, false, false, false, false);
+  box-shadow: compact(inset 0 0.125rem 0.125rem rgba(0, 0, 0, 0.1), false, false, false, false, false, false, false, false, false);
+}
+
+.c-checkbox .c-indicator {
+  border-radius: .25rem;
+}
+
+.c-checkbox input:checked ~ .c-indicator {
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgOCA4IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4IDgiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTYuNCwxTDUuNywxLjdMMi45LDQuNUwyLjEsMy43TDEuNCwzTDAsNC40bDAuNywwLjdsMS41LDEuNWwwLjcsMC43bDAuNy0wLjdsMy41LTMuNWwwLjctMC43TDYuNCwxTDYuNCwxeiINCgkvPg0KPC9zdmc+DQo=);
+}
+
+.c-checkbox input:indeterminate ~ .c-indicator {
+  background-color: #0074d9;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iOHB4IiBoZWlnaHQ9IjhweCIgdmlld0JveD0iMCAwIDggOCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgOCA4IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0wLDN2Mmg4VjNIMHoiLz4NCjwvc3ZnPg0K);
+  -webkit-box-shadow: compact(none, false, false, false, false, false, false, false, false, false);
+  -moz-box-shadow: compact(none, false, false, false, false, false, false, false, false, false);
+  box-shadow: compact(none, false, false, false, false, false, false, false, false, false);
+}
+
+.c-radio .c-indicator {
+  border-radius: 50%;
+}
+
+.c-radio input:checked ~ .c-indicator {
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgOCA4IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4IDgiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTQsMUMyLjMsMSwxLDIuMywxLDRzMS4zLDMsMywzczMtMS4zLDMtM1M1LjcsMSw0LDF6Ii8+DQo8L3N2Zz4NCg==);
+}
+
+/**
+     * @name Layout options
+     *
+     * @description By default radios and checkboxes are `inline-block` with no additional spacing set. Use these optional classes to tweak the layout.
+     *
+     * @markup
+  <div class="c-inputs-stacked">
+    <label class="c-input c-radio">
+      <input id="radioStacked1" name="radio-stacked" type="radio">
+      <span class="c-indicator"></span>
+      Toggle this custom radio
+    </label>
+    <label class="c-input c-radio">
+      <input id="radioStacked2" name="radio-stacked" type="radio">
+      <span class="c-indicator"></span>
+      Or toggle this other custom radio
+    </label>
+  </div>
+     */
+.c-inputs-stacked .c-input {
+  display: inline;
+}
+
+.c-inputs-stacked .c-input::after {
+  display: block;
+  margin-bottom: .25rem;
+  content: "";
+}
+
+.c-inputs-stacked .c-input + .c-input {
+  margin-left: 0;
+}
+
+/**
+     * @name Select
+     *
+     * @description Replaces the browser default select with a custom one, mostly pulled from http://primercss.io.
+     *
+     * @markup
+<select class="c-select">
+  <option selected>Open this select menu</option>
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+</select>
+     */
+.c-select {
+  display: inline-block;
+  max-width: 100%;
+  padding: .375rem 1.75rem .375rem .75rem;
+  padding-right: .75rem \9;
+  vertical-align: middle;
+  background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAUCAMAAACzvE1FAAAADFBMVEUzMzMzMzMzMzMzMzMKAG/3AAAAA3RSTlMAf4C/aSLHAAAAPElEQVR42q3NMQ4AIAgEQTn//2cLdRKppSGzBYwzVXvznNWs8C58CiussPJj8h6NwgorrKRdTvuV9v16Afn0AYFOB7aYAAAAAElFTkSuQmCC) no-repeat right 0.75rem center;
+  background-image: none \9;
+  background-size: 8px 10px;
+  border: 1px solid #e8e8e8;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+.c-select:focus {
+  border-color: #51a7e8;
+  outline: none;
+  -webkit-box-shadow: compact(inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 5px rgba(81, 167, 232, 0.5), false, false, false, false, false, false, false, false);
+  -moz-box-shadow: compact(inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 5px rgba(81, 167, 232, 0.5), false, false, false, false, false, false, false, false);
+  box-shadow: compact(inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 5px rgba(81, 167, 232, 0.5), false, false, false, false, false, false, false, false);
+}
+
+.c-select::-ms-expand {
+  opacity: 0;
+}
+
+.c-select-sm {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  font-size: 12px;
+}
+
+.c-select-sm:not([multiple]) {
+  height: 26px;
+  min-height: 26px;
+}
+
+/**
+ * @name Dropdown List Spec
+ *
+ * @markup
+  <button class="btn btn-secondary" type="button" data-toggle="dropdown">
+    Dropdown
+  </button>
+  <div class="dropdown-element dropdown-theme-basic dropdown-open">
+    <div class="dropdown-content">
+      <div class="dropdown-list">
+        <ul>
+          <li>Action</li>
+          <li><i class="icon-search"></i> Another action</li>
+          <li class="focus"><a href="#">A link</a></li>
+          <li><a href="#"><i class="icon-search"></i> Something else here</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+ */
+.dropdown-element, .dropdown-element:after, .dropdown-element:before, .dropdown-element *, .dropdown-element *:after, .dropdown-element *:before {
+  box-sizing: border-box;
+}
+
+.dropdown-element {
+  position: absolute;
+  display: none;
+}
+
+.dropdown-element.dropdown-open {
+  display: block;
+}
+
+.dropdown-element.dropdown-theme-basic {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.dropdown-element.dropdown-theme-basic .dropdown-content {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: compact(0 6px 12px rgba(0, 0, 0, 0.175), false, false, false, false, false, false, false, false, false);
+  -moz-box-shadow: compact(0 6px 12px rgba(0, 0, 0, 0.175), false, false, false, false, false, false, false, false, false);
+  box-shadow: compact(0 6px 12px rgba(0, 0, 0, 0.175), false, false, false, false, false, false, false, false, false);
+  z-index: 1000;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  font-family: inherit;
+  color: inherit;
+  overflow: auto;
+  max-height: 18rem;
+}
+
+.dropdown-list {
+  display: none;
+}
+
+.dropdown-list ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.dropdown-list li {
+  cursor: pointer;
+  padding: 0.6rem 1.2rem;
+  color: #212121;
+  line-height: 1;
+}
+
+.dropdown-list li i {
+  margin-right: 0.6rem;
+}
+
+.dropdown-list li a {
+  text-decoration: none;
+  color: #212121;
+  -webkit-transition: compact(compact(none, false, false, false, false, false, false, false, false, false) false false);
+  -moz-transition: compact(compact(none, false, false, false, false, false, false, false, false, false) false false false);
+  -o-transition: compact(compact(none, false, false, false, false, false, false, false, false, false) false false false);
+  transition: compact(none, false, false, false, false, false, false, false, false, false);
+}
+
+.dropdown-list li strong {
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.dropdown-list li:hover, .dropdown-list li.focus {
+  background: #607d8b;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.dropdown-list li:hover a, .dropdown-list li.focus a {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.dropdown-element.dropdown-open .dropdown-list {
+  display: block;
+}
+
+/**
+ *
+ */
+[contenteditable]:focus:focus, [contenteditable]:focus.pseudo-class-focus {
+  border-color: #66afe9;
+  outline: none;
+  -webkit-box-shadow: compact(inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6), false, false, false, false, false, false, false, false, false);
+  -moz-box-shadow: compact(inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6), false, false, false, false, false, false, false, false, false);
+  box-shadow: compact(inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6), false, false, false, false, false, false, false, false, false);
+}
+
+/**
+ * @name Form
+ */
+.form-inline {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.error-message {
+  font-size: 0.75rem;
+  padding: .1rem;
+}
+
+/**
+ * @name Input
+ *
+ * @state :focus - Focus State
+ *
+ * @markup
+ *  <input class="form-control" type="text" placeholder="Enter Name">
+ *  <br>
+ *  <input class="form-control" type="email" placeholder="Enter Email">
+ *  <br>
+ *  <input class="form-control" type="password" placeholder="Enter Password">
+ *  <br>
+ *  <input class="form-control" type="search" placeholder="Enter Search">
+ */
+.form-control, .checkout-list li .drawer > div .form-row input {
+  width: 100%;
+  padding: 0.3rem 0.6rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #212121;
+  background-color: #fafafa;
+  border: 1px solid #dbdbdb;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-transition: compact(compact(border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s, false, false, false, false, false, false, false, false) false false);
+  -moz-transition: compact(compact(border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s, false, false, false, false, false, false, false, false) false false false);
+  -o-transition: compact(compact(border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s, false, false, false, false, false, false, false, false) false false false);
+  transition: compact(border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s, false, false, false, false, false, false, false, false);
+}
+
+.form-control::-ms-expand, .checkout-list li .drawer > div .form-row input::-ms-expand {
+  background-color: transparent;
+  border: 0;
+}
+
+.form-control:focus, .checkout-list li .drawer > div .form-row input:focus, .form-control.pseudo-class-focus, .checkout-list li .drawer > div .form-row input.pseudo-class-focus {
+  border-color: #66afe9;
+  outline: none;
+  -webkit-box-shadow: compact(inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6), false, false, false, false, false, false, false, false, false);
+  -moz-box-shadow: compact(inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6), false, false, false, false, false, false, false, false, false);
+  box-shadow: compact(inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6), false, false, false, false, false, false, false, false, false);
+}
+
+.form-control::placeholder, .checkout-list li .drawer > div .form-row input::placeholder {
+  color: #757575;
+  opacity: 1;
+}
+
+.form-control:disabled, .checkout-list li .drawer > div .form-row input:disabled {
+  background-color: #ededed;
+  opacity: 1;
+}
+
+.form-control:disabled, .checkout-list li .drawer > div .form-row input:disabled {
+  cursor: not-allowed;
+}
+
+/**
+     * @name Form control feedback states
+     *
+     * @description Apply contextual and semantic states to individual form controls.
+     *
+     * @markup
+<div class="form-group has-success">
+  <label class="control-label" for="inputSuccess1">Input with success</label>
+  <input type="text" class="form-control form-control-success" id="inputSuccess1">
+</div>
+<div class="form-group has-warning">
+  <label class="control-label" for="inputWarning1">Input with warning</label>
+  <input type="text" class="form-control form-control-warning" id="inputWarning1">
+</div>
+<div class="form-group has-error">
+  <label class="control-label" for="inputError1">Input with error</label>
+  <input type="text" class="form-control form-control-error" id="inputError1">
+</div>
+
+<div class="has-success">
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" id="checkboxSuccess" value="option1">
+      Checkbox with success
+    </label>
+  </div>
+</div>
+<div class="has-warning">
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" id="checkboxWarning" value="option1">
+      Checkbox with warning
+    </label>
+  </div>
+</div>
+<div class="has-error">
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" id="checkboxError" value="option1">
+      Checkbox with error
+    </label>
+  </div>
+</div>
+     */
+.form-control-success,
+.form-control-warning,
+.form-control-error {
+  padding-right: 1.8rem;
+  background-repeat: no-repeat;
+  background-position: center right 0.525rem;
+  background-size: 1.365rem 1.365rem;
+}
+
+.has-success .help-block,
+.has-success .form-control-label,
+.has-success .radio,
+.has-success .checkbox,
+.has-success .radio-inline,
+.has-success .checkbox-inline,
+.has-success.radio label,
+.has-success.checkbox label,
+.has-success.radio-inline label,
+.has-success.checkbox-inline label {
+  color: #4caf50;
+}
+
+.has-success .form-control, .has-success .checkout-list li .drawer > div .form-row input, .checkout-list li .drawer > div .form-row .has-success input {
+  border-color: #4caf50;
+}
+
+.has-success .input-group-addon {
+  color: #4caf50;
+  border-color: #4caf50;
+  background-color: #d9eeda;
+}
+
+.has-success .form-control-feedback {
+  color: #4caf50;
+}
+
+.has-success .form-control-success {
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNoZWNrIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDYxMiA3OTIiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDYxMiA3OTIiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwYXRoIGZpbGw9IiM1Q0I4NUMiIGQ9Ik0yMzMuOCw2MTAuMWMtMTMuMywwLTI1LjktNi4yLTM0LTE2LjlMOTAuNSw0NDguOEM3Ni4zLDQzMCw4MCw0MDMuMyw5OC44LDM4OS4xYzE4LjgtMTQuMyw0NS41LTEwLjUsNTkuOCw4LjNsNzEuOSw5NWwyMjAuOS0yNTAuNWMxMi41LTIwLDM4LjgtMjYuMSw1OC44LTEzLjZjMjAsMTIuNCwyNi4xLDM4LjcsMTMuNiw1OC44TDI3MCw1OTBjLTcuNCwxMi0yMC4yLDE5LjQtMzQuMywyMC4xQzIzNS4xLDYxMC4xLDIzNC41LDYxMC4xLDIzMy44LDYxMC4xeiIvPjwvc3ZnPg==");
+}
+
+.has-warning .help-block,
+.has-warning .form-control-label,
+.has-warning .radio,
+.has-warning .checkbox,
+.has-warning .radio-inline,
+.has-warning .checkbox-inline,
+.has-warning.radio label,
+.has-warning.checkbox label,
+.has-warning.radio-inline label,
+.has-warning.checkbox-inline label {
+  color: #ff5722;
+}
+
+.has-warning .form-control, .has-warning .checkout-list li .drawer > div .form-row input, .checkout-list li .drawer > div .form-row .has-warning input {
+  border-color: #ff5722;
+}
+
+.has-warning .input-group-addon {
+  color: #ff5722;
+  border-color: #ff5722;
+  background-color: #fff2ee;
+}
+
+.has-warning .form-control-feedback {
+  color: #ff5722;
+}
+
+.has-warning .form-control-warning {
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9Ildhcm5pbmciIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgNjEyIDc5MiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNjEyIDc5MiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBhdGggZmlsbD0iI0YwQUQ0RSIgZD0iTTYwMyw2NDAuMmwtMjc4LjUtNTA5Yy0zLjgtNi42LTEwLjgtMTAuNi0xOC41LTEwLjZzLTE0LjcsNC4xLTE4LjUsMTAuNkw5LDY0MC4yYy0zLjcsNi41LTMuNiwxNC40LDAuMiwyMC44YzMuOCw2LjUsMTAuOCwxMC40LDE4LjMsMTAuNGg1NTcuMWM3LjUsMCwxNC41LTMuOSwxOC4zLTEwLjRDNjA2LjYsNjU0LjYsNjA2LjcsNjQ2LjYsNjAzLDY0MC4yeiBNMzM2LjYsNjEwLjJoLTYxLjJWNTQ5aDYxLjJWNjEwLjJ6IE0zMzYuNiw1MDMuMWgtNjEuMlYzMDQuMmg2MS4yVjUwMy4xeiIvPjwvc3ZnPg==");
+}
+
+.has-error .help-block,
+.has-error .form-control-label,
+.has-error .radio,
+.has-error .checkbox,
+.has-error .radio-inline,
+.has-error .checkbox-inline,
+.has-error.radio label,
+.has-error.checkbox label,
+.has-error.radio-inline label,
+.has-error.checkbox-inline label {
+  color: #f44336;
+}
+
+.has-error .form-control, .has-error .checkout-list li .drawer > div .form-row input, .checkout-list li .drawer > div .form-row .has-error input {
+  border-color: #f44336;
+}
+
+.has-error .input-group-addon {
+  color: #f44336;
+  border-color: #f44336;
+  background-color: #fff8f7;
+}
+
+.has-error .form-control-feedback {
+  color: #f44336;
+}
+
+.has-error .form-control-error {
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNyb3NzIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDYxMiA3OTIiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDYxMiA3OTIiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwYXRoIGZpbGw9IiNEOTUzNEYiIGQ9Ik00NDcsNTQ0LjRjLTE0LjQsMTQuNC0zNy42LDE0LjQtNTEuOSwwTDMwNiw0NTEuN2wtODkuMSw5Mi43Yy0xNC40LDE0LjQtMzcuNiwxNC40LTUxLjksMGMtMTQuNC0xNC40LTE0LjQtMzcuNiwwLTUxLjlsOTIuNC05Ni40TDE2NSwyOTkuNmMtMTQuNC0xNC40LTE0LjQtMzcuNiwwLTUxLjlzMzcuNi0xNC40LDUxLjksMGw4OS4yLDkyLjdsODkuMS05Mi43YzE0LjQtMTQuNCwzNy42LTE0LjQsNTEuOSwwYzE0LjQsMTQuNCwxNC40LDM3LjYsMCw1MS45TDM1NC43LDM5Nmw5Mi40LDk2LjRDNDYxLjQsNTA2LjgsNDYxLjQsNTMwLDQ0Nyw1NDQuNHoiLz48L3N2Zz4=");
+}
+
+@font-face {
+  font-family: 'WooCommercePOS';
+  src: url("../fonts/woocommerce-pos.eot?v=0.3.1");
+  src: url("../fonts/woocommerce-pos.eot?#iefix&v=0.3.1") format("embedded-opentype"), url("../fonts/woocommerce-pos.woff?v=0.3.1") format("woff"), url("../fonts/woocommerce-pos.ttf?v=0.3.1") format("truetype"), url("../fonts/woocommerce-pos.svg?v=0.3.1#woocommerceposregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: WooCommercePOS;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Required for <i> rotate ========= */
+  display: inline-block;
+  /* span for hidden text ========= */
+}
+
+[class^="icon-"] span, [class*=" icon-"] span {
+  display: none;
+}
+
+/**
+  * @name Icons
+  *
+  * @markup
+  *
+    <i class="icon-add"></i> add
+    <i class="icon-angle-down"></i> angle-down
+    <i class="icon-angle-up"></i> angle-up
+    <i class="icon-barcode"></i> barcode
+    <i class="icon-bars"></i> bars
+    <i class="icon-check"></i> check
+    <i class="icon-chevron-down"></i> chevron-down
+    <i class="icon-chevron-left"></i> chevron-left
+    <i class="icon-chevron-right"></i> chevron-right
+    <i class="icon-chevron-up"></i> chevron-up
+    <i class="icon-chevron-circle-right"></i> chevron-circle-right
+    <i class="icon-cog"></i> cog
+    <i class="icon-coupons"></i> coupons
+    <i class="icon-customers"></i> customers
+    <i class="icon-delete"></i> delete
+    <i class="icon-error"></i> error
+    <i class="icon-globe"></i> globe
+    <i class="icon-info-circle"></i> info-circle
+    <i class="icon-minus"></i> minus
+    <i class="icon-more-horiz"></i> more-horiz
+    <i class="icon-more-vert"></i> more-vert
+    <i class="icon-note"></i> note
+    <i class="icon-orders"></i> orders
+    <i class="icon-plus"></i> plus
+    <i class="icon-plus-circle"></i> plus-circle
+    <i class="icon-pos"></i> pos
+    <i class="icon-products"></i> products
+    <i class="icon-qrcode"></i> grcode
+    <i class="icon-receipt"></i> receipt
+    <i class="icon-refresh"></i> refresh
+    <i class="icon-remove"></i> remove
+    <i class="icon-search"></i> search
+    <i class="icon-success"></i> success
+    <i class="icon-support"></i> support
+    <i class="icon-times"></i> times
+    <i class="icon-times-circle"></i> times-circle
+    <i class="icon-user"></i> user
+    <i class="icon-woocommerce-pos"></i> woocommerce-pos
+    <i class="icon-wordpress"></i> wordpress
+  *
+  */
+.icon-add:before {
+  content: "\f055";
+}
+
+.icon-angle-down:before {
+  content: "\f107";
+}
+
+.icon-angle-up:before {
+  content: "\f106";
+}
+
+.icon-barcode:before {
+  content: "\e603";
+}
+
+.icon-bars:before {
+  content: "\f0c9";
+}
+
+.icon-check:before {
+  content: "\f00c";
+}
+
+.icon-chevron-left:before {
+  content: "\f053";
+}
+
+.icon-products:before {
+  content: "\e603";
+}
+
+.icon-success:before {
+  content: "\f00c";
+}
+
+.icon-chevron-down:before {
+  content: "\f078";
+}
+
+.icon-chevron-right:before {
+  content: "\f054";
+}
+
+.icon-chevron-up:before {
+  content: "\f077";
+}
+
+.icon-chevron-circle-right:before {
+  content: "\f138";
+}
+
+.icon-cog:before {
+  content: "\f013";
+}
+
+.icon-coupons:before {
+  content: "\e607";
+}
+
+.icon-customers:before {
+  content: "\e606";
+}
+
+.icon-delete:before {
+  content: "\e601";
+}
+
+.icon-error:before {
+  content: "\f00d";
+}
+
+.icon-globe:before {
+  content: "\f0ac";
+}
+
+.icon-info-circle:before {
+  content: "\f05a";
+}
+
+.icon-minus:before {
+  content: "\f068";
+}
+
+.icon-more-horiz:before {
+  content: "\e608";
+}
+
+.icon-more-vert:before {
+  content: "\e609";
+}
+
+.icon-note:before {
+  content: "\e026";
+}
+
+.icon-orders:before {
+  content: "\e602";
+}
+
+.icon-plus:before {
+  content: "\f067";
+}
+
+.icon-plus-circle:before {
+  content: "\f055";
+}
+
+.icon-pos:before {
+  content: "\e600";
+}
+
+.icon-qrcode:before {
+  content: "\e604";
+}
+
+.icon-receipt:before {
+  content: "\e602";
+}
+
+.icon-refresh:before {
+  content: "\f01e";
+}
+
+.icon-remove:before {
+  content: "\f057";
+}
+
+.icon-search:before {
+  content: "\f002";
+}
+
+.icon-support:before {
+  content: "\e605";
+}
+
+.icon-times:before {
+  content: "\f00d";
+}
+
+.icon-times-circle:before {
+  content: "\f057";
+}
+
+.icon-user:before {
+  content: "\e606";
+}
+
+.icon-woocommerce-pos:before {
+  content: "\e600";
+}
+
+.icon-wordpress:before {
+  content: "\e60a";
+}
+
+a .icon-add {
+  color: #bdbdbd;
+}
+
+a .icon-add:hover {
+  color: #4caf50;
+}
+
+a .icon-remove {
+  color: #bdbdbd;
+}
+
+a .icon-remove:hover {
+  color: #f44336;
+}
+
+/**
+  * @name Order icons
+  *
+  * @markup
+  *
+    <i class="icon-pending"></i> pending
+    <i class="icon-completed"></i> completed
+    <i class="icon-on-hold"></i> on-hold
+    <i class="icon-failed"></i> failed
+    <i class="icon-cancelled"></i> cancelled
+    <i class="icon-processing"></i> processing
+    <i class="icon-refunded"></i> refunded
+    <i class="icon-open"></i> open
+  *
+  */
+.icon-pending:before {
+  content: "\e012";
+  color: #ffba00;
+}
+
+.icon-completed:before {
+  content: "\e015";
+  color: #2ea2cc;
+}
+
+.icon-on-hold:before {
+  content: "\e033";
+  color: #999;
+}
+
+.icon-failed:before {
+  content: "\e016";
+  color: #d0c21f;
+}
+
+.icon-cancelled:before {
+  content: "\e013";
+  color: #a00;
+}
+
+.icon-processing:before {
+  content: "\e011";
+  color: #73a724;
+}
+
+.icon-refunded:before {
+  content: "\e014";
+  color: #999;
+}
+
+.icon-open:before {
+  content: "\e01d";
+  color: #73a724;
+}
+
+/**
+  * @name Icon sizing
+  *
+  * @markup
+  *
+    <i class="icon-woocommerce-pos icon-lg"></i>
+    <i class="icon-woocommerce-pos icon-2x"></i>
+    <i class="icon-woocommerce-pos icon-3x"></i>
+    <i class="icon-woocommerce-pos icon-4x"></i>
+    <i class="icon-woocommerce-pos icon-5x"></i>
+  *
+  */
+.icon-lg {
+  font-size: 1.33333333em;
+}
+
+.icon-2x {
+  font-size: 2em;
+}
+
+.icon-3x {
+  font-size: 3em;
+}
+
+.icon-4x {
+  font-size: 4em;
+}
+
+.icon-5x {
+  font-size: 5em;
+}
+
+/**
+  * @name Spinning icons
+  *
+  * @markup
+  *
+    <i class="icon-cog icon-spin"></i>
+    <i class="icon-cog icon-spin--steps8"></i>
+    <i class="icon-cog icon-spin--steps12"></i>
+  *
+  */
+.icon-spin {
+  -webkit-animation: spin 2s infinite linear;
+  -moz-animation: spin 2s infinite linear;
+  -ms-animation: spin 2s infinite linear;
+  -o-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
+}
+
+.icon-spin--steps8 {
+  -webkit-animation: spin 1s infinite steps(8);
+  -moz-animation: spin 1s infinite steps(8);
+  -ms-animation: spin 1s infinite steps(8);
+  -o-animation: spin 1s infinite steps(8);
+  animation: spin 1s infinite steps(8);
+}
+
+.icon-spin--steps12 {
+  -webkit-animation: spin 1s infinite steps(12);
+  -moz-animation: spin 1s infinite steps(12);
+  -ms-animation: spin 1s infinite steps(12);
+  -o-animation: spin 1s infinite steps(12);
+  animation: spin 1s infinite steps(12);
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    -moz-transform: rotate(359deg);
+    -ms-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+@-moz-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    -moz-transform: rotate(359deg);
+    -ms-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+@-o-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    -moz-transform: rotate(359deg);
+    -ms-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    -moz-transform: rotate(359deg);
+    -ms-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+/**
+  * @name Loading icons
+  *
+  * @markup
+  *
+    <i class="icon-loading"></i> loading
+    <i class="icon-spinner"></i> spinner
+    <i class="icon-fail"></i> fail
+  *
+  * @todo how to extend
+  */
+.icon-loading, .icon-spinner {
+  -webkit-animation: spin 2s infinite linear;
+  -moz-animation: spin 2s infinite linear;
+  -ms-animation: spin 2s infinite linear;
+  -o-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
+}
+
+.icon-loading:before, .icon-spinner:before {
+  content: "\f013";
+}
+
+.icon-fail {
+  font-family: monospace;
+}
+
+.icon-fail:before {
+  content: "¯\\_(ツ)_/¯";
+}
+
+/**
+  * @name Rotated icons
+  *
+  * @markup
+  *
+    <i class="icon-woocommerce-pos"></i>
+    <i class="icon-woocommerce-pos icon-rotate-90"></i>
+    <i class="icon-woocommerce-pos icon-rotate-180"></i>
+    <i class="icon-woocommerce-pos icon-rotate-270"></i>
+    <i class="icon-woocommerce-pos icon-flip-horizontal"></i>
+    <i class="icon-woocommerce-pos icon-flip-vertical"></i>
+  *
+  */
+.icon-rotate-90 {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.icon-rotate-180 {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.icon-rotate-270 {
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+
+.icon-flip-horizontal {
+  -webkit-transform: scale(-1, 1);
+  -moz-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+
+.icon-flip-vertical {
+  -webkit-transform: scale(-1, 1);
+  -moz-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+
+/**
+  * @name Icon states
+  *
+  * @state .text-success - Success
+  * @state .text-error - Failure
+  *
+  * @markup
+  *
+    <i class="icon-check"></i>
+    <i class="icon-times"></i>
+  *
+  */
+/**
+  * @name Input Group
+  *
+  * @markup
+  * <div class="input-group">
+  *   <span class="input-group-addon" id="basic-addon1">@</span>
+  *   <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+  * </div>
+  * <br>
+  * <div class="input-group">
+  *   <input type="text" class="form-control" placeholder="Recipient's username" aria-describedby="basic-addon2">
+  *   <span class="input-group-addon" id="basic-addon2">.00</span>
+  * </div>
+  * <br>
+  * <label for="basic-url">Your vanity URL</label>
+  * <div class="input-group">
+  *   <span class="input-group-addon" id="basic-addon3">https://example.com/users/</span>
+  *   <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+  * </div>
+  * <br>
+  * <div class="input-group">
+  *   <span class="input-group-addon">$</span>
+  *   <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+  *   <span class="input-group-addon">.00</span>
+  * </div>
+  */
+/**
+  * @name Button Addons
+  *
+  * @markup
+  * <div class="input-group">
+  *   <span class="input-group-btn">
+  *     <button class="btn btn-secondary">Go!</button>
+  *   </span>
+  *   <input type="text" class="form-control" placeholder="Search for...">
+  * </div>
+  * <br>
+  * <div class="input-group">
+  *   <input type="text" class="form-control" placeholder="Search for...">
+  *   <span class="input-group-btn">
+  *     <a href="#777" class="btn btn-secondary">Go!</a>
+  *   </span>
+  * </div>
+  * <br>
+  * <div class="input-group">
+  *   <span class="input-group-btn">
+  *     <a href="#777" class="btn btn-secondary">Go!</a>
+  *   </span>
+  *   <input type="text" class="form-control" placeholder="Search for...">
+  *   <span class="input-group-addon">Go!</span>
+  *   <span class="input-group-btn">
+  *     <a href="#777" class="btn btn-primary">Go!</a>
+  *   </span>
+  * </div>
+  */
+.input-group {
+  position: relative;
+  display: flex;
+}
+
+.input-group .form-control, .input-group .checkout-list li .drawer > div .form-row input, .checkout-list li .drawer > div .form-row .input-group input {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 0;
+}
+
+.form-inline .input-group {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin-right: 0.6rem;
+}
+
+.input-group-addon,
+.input-group-btn {
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.input-group-addon {
+  padding: 0.3rem 0.6rem;
+  text-align: center;
+  color: #757575;
+  background: #dbdbdb;
+  border: 1px solid #dbdbdb;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.input-group-addon input[type="radio"],
+.input-group-addon input[type="checkbox"] {
+  margin-top: 0;
+}
+
+.input-group-btn {
+  position: relative;
+  font-size: 0;
+  white-space: nowrap;
+}
+
+.input-group-btn > .btn {
+  -webkit-box-shadow: compact(none, false, false, false, false, false, false, false, false, false);
+  -moz-box-shadow: compact(none, false, false, false, false, false, false, false, false, false);
+  box-shadow: compact(none, false, false, false, false, false, false, false, false, false);
+  text-decoration: none;
+  position: relative;
+}
+
+.input-group-btn > .btn + .btn {
+  margin-left: -1px;
+}
+
+.input-group-btn > .btn:focus, .input-group-btn > .btn:active, .input-group-btn > .btn:hover {
+  z-index: 2;
+}
+
+.input-group-btn:first-child > .btn,
+.input-group-btn:first-child > .btn-group {
+  margin-right: -1px;
+}
+
+.input-group-btn:last-child > .btn,
+.input-group-btn:last-child > .btn-group {
+  z-index: 2;
+  margin-left: -1px;
+}
+
+.input-group-addon:not(:first-child):not(:last-child),
+.input-group-btn:not(:first-child):not(:last-child),
+.input-group .form-control:not(:first-child):not(:last-child),
+.input-group .checkout-list li .drawer > div .form-row input:not(:first-child):not(:last-child),
+.checkout-list li .drawer > div .form-row .input-group input:not(:first-child):not(:last-child) {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
+
+.input-group .form-control:first-child, .input-group .checkout-list li .drawer > div .form-row input:first-child, .checkout-list li .drawer > div .form-row .input-group input:first-child,
+.input-group-addon:first-child,
+.input-group-btn:first-child > .btn,
+.input-group-btn:first-child > .btn-group > .btn,
+.input-group-btn:first-child > .dropdown-toggle,
+.input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle),
+.input-group.input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
+  -moz-border-radius-topright: 0;
+  -webkit-border-top-right-radius: 0;
+  border-top-right-radius: 0;
+  -moz-border-radius-bottomright: 0;
+  -webkit-border-bottom-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.input-group-addon:first-child {
+  border-right: 0;
+}
+
+.input-group .form-control:last-child, .input-group .checkout-list li .drawer > div .form-row input:last-child, .checkout-list li .drawer > div .form-row .input-group input:last-child,
+.input-group-addon:last-child,
+.input-group-btn:last-child > .btn,
+.input-group-btn:last-child > .btn-group > .btn,
+.input-group-btn:last-child > .dropdown-toggle,
+.input-group-btn:first-child > .btn:not(:first-child),
+.input-group.input-group-btn:first-child > .btn-group:not(:first-child) > .btn {
+  -moz-border-radius-topleft: 0;
+  -webkit-border-top-left-radius: 0;
+  border-top-left-radius: 0;
+  -moz-border-radius-bottomleft: 0;
+  -webkit-border-bottom-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.input-group-addon:last-child {
+  border-left: 0;
+}
+
+/**
+     * @name Search Group
+     *
+     * @markup
+     * <div class="input-group">
+     *   <span class="input-group-addon">
+     *     <i class="icon-search"></i>
+     *   </span>
+     *   <input type="search" class="form-control" placeholder="Search for...">
+     *   <span class="input-group-addon clear">
+     *     <i class="icon-times-circle icon-lg"></i>
+     *   </span>
+     *   <span class="input-group-btn">
+     *     <a href="#777" class="btn btn-secondary">
+     *       <i class="icon-refresh"></i>
+     *     </a>
+     *   </span>
+     * </div>
+     */
+.clear {
+  display: none;
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+  border: 0;
+}
+
+.clear i {
+  position: absolute;
+  right: 0.6rem;
+  margin-top: -2px;
+  z-index: 3;
+  color: #757575;
+}
+
+.clear i:hover {
+  cursor: pointer;
+  color: #212121;
+}
+
+/**
+     * @name List
+     *
+     * @state .list-striped - Stripe alternate rows
+     *
+     * @markup
+     *   <div class="list">
+     *     <ul>
+     *       <li>Row</li>
+     *       <li>Row</li>
+     *       <li>Row</li>
+     *       <li>Row</li>
+     *     </ul>
+     *   </div>
+     */
+.list > div > ul, .list > ul {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.list > div > ul > li, .list > ul > li {
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.list > div > ul > li:last-of-type, .list > ul > li:last-of-type {
+  border-bottom: 0;
+}
+
+.list > div > ul > li.empty, .list > ul > li.empty {
+  padding: 0.6rem 0.6rem;
+}
+
+.list > div > ul > li.sub-heading, .list > ul > li.sub-heading {
+  background-color: #607d8b;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+}
+
+.list-striped > div > ul > li:nth-of-type(odd), .list-striped > ul > li:nth-of-type(odd) {
+  background-color: #f9f9f9;
+}
+
+/**
+     * @name List Header
+     *
+     * @markup
+     *   <div class="list-header">
+     *     <div>Cell</div>
+     *     <div>Cell</div>
+     *     <div>Cell</div>
+     *     <div>Cell</div>
+     *   </div>
+     */
+.list-header {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background: #607d8b;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.list-header > div {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 0.6rem 0.6rem;
+}
+
+/**
+     * @name List Row
+     *
+     * @markup
+     *   <div class="list-row">
+     *     <div>Cell</div>
+     *     <div>Cell<br>New Line<br>New Line</div>
+     *     <div>Cell</div>
+     *     <div>Cell</div>
+     *   </div>
+     */
+.list-row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center;
+}
+
+.list-row > div {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 0.6rem 0.6rem;
+  word-wrap: break-word;
+}
+
+.list-row > div.action i {
+  font-size: 2.5em;
+}
+
+/**
+      * @name List Drawer
+      *
+      * @markup
+      *   <div class="list-drawer">
+      *     <div class="list-row">
+      *       <div>Cell</div>
+      *       <div>Cell<br>New Line<br>New Line</div>
+      *       <div>Cell</div>
+      *       <div>Cell</div>
+      *     </div>
+      *     <div class="list-row">
+      *       <div>Cell</div>
+      *       <div>Cell<br>New Line<br>New Line</div>
+      *       <div>Cell</div>
+      *       <div>Cell</div>
+      *     </div>
+      *   </div>
+      */
+.list-drawer {
+  background: #e8e8e8;
+  box-shadow: inset 0 0 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+.list-drawer .list-row {
+  border-top: 1px solid #ddd;
+}
+
+.list-drawer .c-input > input:not(:checked) ~ .c-indicator {
+  background: #fff;
+}
+
+/**
+     * @name Infinite List
+     *
+     * @state .pull - Pull to refresh
+     * @state .loading - Loading items
+     *
+     * @markup
+     *   <div class="list list-infinite">
+     *     <div><i class="icon-chevron-down"></i></div>
+     *       <ul>
+     *         <li>
+     *           <div class="list-item">
+     *             <div class="list-row">
+     *               <div>Cell</div>
+     *               <div>Cell<br>New Line<br>New Line</div>
+     *               <div>Cell</div>
+     *               <div>Cell</div>
+     *             </div>
+     *           </div>
+     *           <div class="list-drawer">
+     *             <div>
+     *               <div class="list-row">
+     *                 <div>Cell</div>
+     *                 <div>Cell<br>New Line<br>New Line</div>
+     *                 <div>Cell</div>
+     *                 <div>Cell</div>
+     *               </div>
+     *               <div class="list-row">
+     *                 <div>Cell</div>
+     *                 <div>Cell<br>New Line<br>New Line</div>
+     *                 <div>Cell</div>
+     *                 <div>Cell</div>
+     *               </div>
+     *             <div>
+     *           </div>
+     *         </li>
+     *         <li>
+     *           <div class="list-item">
+     *             <div class="list-row">
+     *               <div>Cell</div>
+     *               <div>Cell<br>New Line<br>New Line</div>
+     *               <div>Cell</div>
+     *               <div>Cell</div>
+     *             </div>
+     *           </div>
+     *           <div class="list-drawer">
+     *             <div>
+     *               <div class="list-row">
+     *                 <div>Cell</div>
+     *                 <div>Cell<br>New Line<br>New Line</div>
+     *                 <div>Cell</div>
+     *                 <div>Cell</div>
+     *               </div>
+     *               <div class="list-row">
+     *                 <div>Cell</div>
+     *                 <div>Cell<br>New Line<br>New Line</div>
+     *                 <div>Cell</div>
+     *                 <div>Cell</div>
+     *               </div>
+     *             <div>
+     *           </div>
+     *         </li>
+     *       </ul>
+     *     <div><i class="icon-loading"></i></div>
+     *   </div>
+     */
+.list-infinite > div {
+  display: none;
+  text-align: center;
+  background: #e8e8e8;
+  box-shadow: inset 0 0 8px 0 rgba(0, 0, 0, 0.1);
+  padding: 0.6rem 0.6rem;
+}
+
+.list-infinite.pull > div:first-of-type {
+  display: block;
+}
+
+.list-infinite.loading > div:last-of-type {
+  display: block;
+}
+
+/**
+     * @name List Totals
+     *
+     * @markup
+     *   <div class="list list-totals">
+     *     <ul>
+     *       <li>
+     *         <div>Subtotal</div>
+     *         <div class="total">$3.00</div>
+     *         <div class="action"></div>
+     *       </li>
+     *       <li>
+     *         <div>Tax</div>
+     *         <div class="total">$1.00</div>
+     *         <div class="action"></div>
+     *       </li>
+     *       <li>
+     *         <div>Total</div>
+     *         <div class="total">$1.00</div>
+     *         <div class="action"></div>
+     *       </li>
+     *     </ul>
+     *   </div>
+     */
+.list-totals {
+  text-align: right;
+  background: #fff;
+  border-top: 2px solid #dbdbdb;
+}
+
+.list-totals li > div:first-of-type {
+  font-weight: 700;
+}
+
+/**
+     * @name List Actions
+     *
+     * @markup
+     *   <div class="list-actions">
+     *     <div>
+     *       <button class="btn btn-success">Button</button>
+     *     </div>
+     *   </div>
+     */
+.list-actions {
+  background: #fff;
+  border-top: 2px solid #dbdbdb;
+}
+
+.list-actions > div {
+  padding: 0.6rem 0.6rem;
+  text-align: right;
+}
+
+.list-actions > div > .btn.pull-left {
+  margin-right: 4px;
+}
+
+.list-actions p.message {
+  display: inline-block;
+  text-align: right;
+  margin: 0;
+  padding: 0 0.6rem;
+}
+
+.list-actions:first-of-type {
+  background: #455a64;
+  border-top: 0;
+}
+
+.loading {
+  width: 100%;
+}
+
+.loading p {
+  text-align: center;
+  margin: 0;
+  padding: 0.6rem 0.6rem;
+  color: #757575;
+}
+
+.loading p:not(:first-child) {
+  padding-top: 0;
+}
+
+.loading p:not(:last-child) {
+  padding-bottom: 0;
+}
+
+.loading p .icon-fail {
+  font-size: 40px;
+}
+
+/**
+  * @name Modal
+  *
+  * @state .error - Error Modal
+  *
+  * @markup
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div> <!-- Marionette region -->
+          <h4 class="modal-title">Modal title</h4>
+          <button type="button" class="btn close" data-dismiss="modal" aria-label="Close">
+            <i class="icon-times"></i>
+            <span class="sr-only">Close</span>
+          </button>
+        </div>
+      </div>
+      <div class="modal-body">
+        <p>One fine body&hellip;</p>
+      </div>
+      <div class="modal-footer">
+        <p class="message text-success">Status message <i class="icon-check"></i></p>
+        <button type="button" class="btn pull-left" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+  */
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  overflow: hidden;
+  outline: 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+.modal.fade .modal-dialog {
+  transition: transform .3s ease-out;
+  transform: translate(0, -25%);
+}
+
+.modal.in .modal-dialog {
+  transform: translate(0, 0);
+}
+
+.modal-open {
+  overflow: hidden;
+}
+
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 10px 0;
+  padding: 0 10px;
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0;
+  -webkit-box-shadow: compact(0 3px 9px rgba(0, 0, 0, 0.5), false, false, false, false, false, false, false, false, false);
+  -moz-box-shadow: compact(0 3px 9px rgba(0, 0, 0, 0.5), false, false, false, false, false, false, false, false, false);
+  box-shadow: compact(0 3px 9px rgba(0, 0, 0, 0.5), false, false, false, false, false, false, false, false, false);
+  outline: 0;
+}
+
+.modal-backdrop, .modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #000;
+}
+
+.modal-backdrop.fade, .modal-backdrop.fade {
+  opacity: 0;
+}
+
+.modal-backdrop.in, .modal-backdrop.in {
+  opacity: 0.5;
+}
+
+.modal-header {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.modal-header > div {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal-header .close {
+  -webkit-box-flex: 0;
+  -moz-box-flex: 0;
+  box-flex: 0;
+  -webkit-flex: 0 1 auto;
+  -moz-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  border-width: 0;
+  border-left-width: 1px;
+  border-bottom-width: 1px;
+  margin-bottom: -1px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: compact(none, false, false, false, false, false, false, false, false, false);
+  -moz-box-shadow: compact(none, false, false, false, false, false, false, false, false, false);
+  box-shadow: compact(none, false, false, false, false, false, false, false, false, false);
+  padding: 0.6rem 0.6rem;
+}
+
+.modal-header .close i {
+  padding: 5px 10px;
+}
+
+.modal-title {
+  margin: 0;
+  line-height: 1.5;
+  padding: 0.6rem 0.6rem;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.modal-body {
+  position: relative;
+  padding: 0.6rem 0.6rem;
+  overflow: hidden;
+  *zoom: 1;
+}
+
+.modal-footer {
+  padding: 0.6rem 0.6rem;
+  text-align: right;
+  border-top: 1px solid #e5e5e5;
+  overflow: hidden;
+  *zoom: 1;
+}
+
+.modal-footer .btn + .btn {
+  margin-bottom: 0;
+  margin-left: 5px;
+}
+
+.modal-footer .btn-group .btn + .btn {
+  margin-left: -1px;
+}
+
+.modal-footer .btn-block + .btn-block {
+  margin-left: 0;
+}
+
+.modal-footer p.message {
+  display: inline-block;
+  text-align: right;
+  margin: 0;
+  padding: 0 0.6rem;
+}
+
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+
+/**
+     * Error modal
+     */
+.error .modal-header {
+  background: #d32f2f;
+  border-color: #d74444;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.error .modal-header .btn {
+  color: rgba(255, 255, 255, 0.9);
+  background-color: #d32f2f;
+  border-color: #d74444;
+  -webkit-box-shadow: compact(inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), false, false, false, false, false, false, false, false);
+  -moz-box-shadow: compact(inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), false, false, false, false, false, false, false, false);
+  box-shadow: compact(inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), false, false, false, false, false, false, false, false);
+}
+
+.error .modal-header .btn:hover, .error .modal-header .btn.pseudo-class-hover {
+  color: rgba(255, 255, 255, 0.9);
+  background-color: #ab2424;
+  border-color: #b72727;
+}
+
+.error .modal-header .btn:focus, .error .modal-header .btn.pseudo-class-focus {
+  color: rgba(255, 255, 255, 0.9);
+  background-color: #ab2424;
+  border-color: #b72727;
+}
+
+.error .modal-header .btn:active, .error .modal-header .btn.pseudo-class-active,
+.open > .error .modal-header .btn.dropdown-toggle {
+  color: rgba(255, 255, 255, 0.9);
+  background-color: #ab2424;
+  border-color: #b72727;
+  background-image: none;
+  -webkit-box-shadow: compact(inset 0 3px 5px rgba(0, 0, 0, 0.125), false, false, false, false, false, false, false, false, false);
+  -moz-box-shadow: compact(inset 0 3px 5px rgba(0, 0, 0, 0.125), false, false, false, false, false, false, false, false, false);
+  box-shadow: compact(inset 0 3px 5px rgba(0, 0, 0, 0.125), false, false, false, false, false, false, false, false, false);
+}
+
+.error .modal-header .btn:active:hover,
+.error .modal-header .btn:active.pseudo-class-hover .error .modal-header .btn:active:focus, .error .modal-header .btn:active.pseudo-class-focus, .error .modal-header .btn.pseudo-class-active:hover,
+.error .modal-header .btn.pseudo-class-active.pseudo-class-hover .error .modal-header .btn:active:focus, .error .modal-header .btn.pseudo-class-active.pseudo-class-focus,
+.open > .error .modal-header .btn.dropdown-toggle:hover,
+.open >
+.error .modal-header .btn.dropdown-toggle.pseudo-class-hover .error .modal-header .btn:active:focus,
+.open > .error .modal-header .btn.dropdown-toggle.pseudo-class-focus,
+.error .modal-header .btn:active.pseudo-class-hover .error .modal-header .btn.pseudo-class-active:focus,
+.error .modal-header .btn.pseudo-class-active.pseudo-class-hover .error .modal-header .btn.pseudo-class-active:focus,
+.open >
+.error .modal-header .btn.dropdown-toggle.pseudo-class-hover .error .modal-header .btn.pseudo-class-active:focus,
+.error .modal-header .btn:active.pseudo-class-hover
+.open > .error .modal-header .btn.dropdown-toggle:focus,
+.error .modal-header .btn.pseudo-class-active.pseudo-class-hover
+.open > .error .modal-header .btn.dropdown-toggle:focus,
+.open >
+.error .modal-header .btn.dropdown-toggle.pseudo-class-hover
+.open > .error .modal-header .btn.dropdown-toggle:focus {
+  color: rgba(255, 255, 255, 0.9);
+  background-color: #8d1e1e;
+  border-color: #811b1b;
+}
+
+.error .modal-header .btn.disabled:focus, .error .modal-header .btn.disabled.pseudo-class-focus, .error .modal-header .btn:disabled:focus, .error .modal-header .btn:disabled.pseudo-class-focus {
+  background-color: #d32f2f;
+  border-color: #d74444;
+}
+
+.error .modal-header .btn.disabled:hover, .error .modal-header .btn.disabled.pseudo-class-hover, .error .modal-header .btn:disabled:hover, .error .modal-header .btn:disabled.pseudo-class-hover {
+  background-color: #d32f2f;
+  border-color: #d74444;
+}
+
+.error .modal-body .raw-output {
+  width: 100%;
+  max-height: 200px;
+  overflow: scroll;
+}
+
+@media (min-width: 544px) {
+  .modal-dialog {
+    max-width: 600px;
+    margin: 30px auto;
+  }
+  .modal-content {
+    -webkit-box-shadow: compact(0 5px 15px rgba(0, 0, 0, 0.5), false, false, false, false, false, false, false, false, false);
+    -moz-box-shadow: compact(0 5px 15px rgba(0, 0, 0, 0.5), false, false, false, false, false, false, false, false, false);
+    box-shadow: compact(0 5px 15px rgba(0, 0, 0, 0.5), false, false, false, false, false, false, false, false, false);
+  }
+  .modal-sm {
+    max-width: 300px;
+  }
+}
+
+@media (min-width: 768px) {
+  .modal-lg {
+    max-width: 900px;
+  }
+}
+
+/**
+ * @name Numpad Spec
+ *
+ * @markup
+ *  <div class="numpad">
+ *    <div class="numpad-header">
+ *      <strong>Title</strong>
+ *      <div class="input-group">
+ *        <span class="input-group-btn">
+ *          <a href="#777" class="btn btn-secondary">$</a>
+ *        </span>
+ *        <input type="text" class="form-control">
+ *        <span class="input-group-btn">
+ *          <a href="#777" class="btn btn-primary">%</a>
+ *        </span>
+ *      </div>
+ *    </div>
+ *    <div class="numpad-body">
+ *      <div class="three-cols">
+ *        <div class="row">
+ *          <button class="btn">1</button>
+ *          <button class="btn">2</button>
+ *          <button class="btn">3</button>
+ *        </div>
+ *        <div class="row">
+ *          <button class="btn">4</button>
+ *          <button class="btn">5</button>
+ *          <button class="btn">6</button>
+ *        </div>
+ *        <div class="row">
+ *          <button class="btn">7</button>
+ *          <button class="btn">8</button>
+ *          <button class="btn">9</button>
+ *        </div>
+ *        <div class="row">
+ *          <button class="btn">0</button>
+ *          <button class="btn">00</button>
+ *          <button class="btn">.</button>
+ *        </div>
+ *      </div>
+ *      <div>
+ *        <button class="btn"><i class="icon-delete"></i></button>
+ *        <button class="btn">+/-</button>
+ *        <button class="btn two-rows"><small>return</small></button>
+ *      </div>
+ *      <div>
+ *        <button class="btn">$10.00</button>
+ *        <button class="btn">$50.00</button>
+ *        <button class="btn">$100.00</button>
+ *        <button class="btn">$1000.00</button>
+ *      </div>
+ *    </div>
+ *  </div>
+ */
+.numpad-header {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center;
+}
+
+.numpad-header > strong {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.numpad-header > div {
+  -webkit-box-flex: 0;
+  -moz-box-flex: 0;
+  box-flex: 0;
+  -webkit-flex: 0 1 auto;
+  -moz-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+}
+
+.numpad-body {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.numpad-body > div {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-direction: column;
+}
+
+.numpad-body > div.two-cols {
+  -webkit-box-flex: 2;
+  -moz-box-flex: 2;
+  box-flex: 2;
+  -webkit-flex: 2;
+  -moz-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+}
+
+.numpad-body > div.three-cols {
+  -webkit-box-flex: 3;
+  -moz-box-flex: 3;
+  box-flex: 3;
+  -webkit-flex: 3;
+  -moz-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+}
+
+.numpad-body > div.cash {
+  -webkit-box-flex: 2;
+  -moz-box-flex: 2;
+  box-flex: 2;
+  -webkit-flex: 2;
+  -moz-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+}
+
+.numpad-body .row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.numpad-body button {
+  font-size: 1.5rem;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1 0 4rem;
+  -moz-flex: 1 0 4rem;
+  -ms-flex: 1 0 4rem;
+  flex: 1 0 4rem;
+  min-height: 4rem;
+  margin: 0.2rem;
+}
+
+.numpad-body button.two-rows {
+  -webkit-flex-basis: 8.4rem;
+  -moz-flex-basis: 8.4rem;
+  flex-basis: 8.4rem;
+  -ms-flex-preferred-size: 8.4rem;
+}
+
+.popover .numpad-body {
+  padding: 0.4rem !important;
+}
+
+/**
+ * @name Panel Spec
+ *
+ * @markup
+ *   <section style="height: 100px">
+ *     <div class="panel">
+ *       <div class="panel-header">
+ *         <div>Header</div>
+ *       </div>
+ *       <div class="panel-body">
+ *         <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim quam sed lectus porta porttitor. Donec sit amet mi ante. Morbi facilisis massa ac pretium blandit. Donec auctor dolor eu laoreet imperdiet. Integer ac vestibulum sapien, at porttitor enim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed massa justo, ornare at mattis eget, tincidunt vel enim. Etiam eu tellus vel enim commodo posuere sit amet at mauris. Aliquam erat volutpat. Donec sit amet justo tristique, vulputate leo ut, porta mauris. Cras neque nisi, malesuada ac velit at, pulvinar pulvinar quam.</div>
+ *       </div>
+ *       <div class="panel-footer">
+ *         <div>Footer</div>
+ *       </div>
+ *     </div>
+ *   </section>
+ */
+.panel {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.panel > div {
+  -webkit-box-flex: 0;
+  -moz-box-flex: 0;
+  box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -moz-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.panel > div.panel-body {
+  -webkit-box-flex: 0;
+  -moz-box-flex: 0;
+  box-flex: 0;
+  -webkit-flex: 0 1 auto;
+  -moz-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+}
+
+/**
+     * @name Panel Header Spec
+     *
+     * @markup
+     *   <div class="panel">
+     *     <div class="panel-header">
+     *       <div>
+     *         <h4>Header</h4>
+     *       </div>
+     *     </div>
+     *   </div>
+     */
+.panel-header {
+  background: #607d8b;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.panel-header h4, .panel-header p {
+  text-align: center;
+  margin: 0;
+  padding: 1em 0;
+}
+
+.panel-header p {
+  padding-top: 0;
+}
+
+.panel-body {
+  overflow: auto;
+  background: #fff;
+}
+
+/**
+     * @name Panel Footer Spec
+     *
+     * @markup
+     *   <div class="panel">
+     *     <div class="panel-footer">
+     *       <div>
+     *         <small class="info">Status information</small>
+     *       </div>
+     *     </div>
+     *   </div>
+     */
+.panel-footer > div {
+  background: #cfd8dc;
+  overflow: hidden;
+  *zoom: 1;
+  line-height: 1;
+}
+
+.panel-footer .info {
+  padding: 0.3rem 0.6rem;
+  color: #859ca6;
+  float: right;
+  font-style: italic;
+}
+
+/**
+ * @name Popover
+ *
+ * @markup
+   <div class="popover popover-theme-arrows popover-element popover-open popover-element-attached-top popover-element-attached-center">
+    <div class="popover-content">
+      <div class="popover-header">Popover</div>
+      <div class="popover-body">Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</div>
+      <div class="popover-footer">Footer</div>
+    </div>
+  </div>
+ */
+.popover-element, .popover-element:after, .popover-element:before, .popover-element *, .popover-element *:after, .popover-element *:before {
+  box-sizing: border-box;
+}
+
+.popover-element {
+  position: absolute;
+  display: none;
+}
+
+.popover-element.popover-open {
+  display: block;
+}
+
+.popover-element.popover-theme-arrows {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.popover-element.popover-theme-arrows .popover-content {
+  border-radius: 3px;
+  position: relative;
+  font-family: inherit;
+  background: #455a64;
+  color: rgba(255, 255, 255, 0.9);
+  -webkit-box-shadow: compact(0 6px 12px rgba(0, 0, 0, 0.175), false, false, false, false, false, false, false, false, false);
+  -moz-box-shadow: compact(0 6px 12px rgba(0, 0, 0, 0.175), false, false, false, false, false, false, false, false, false);
+  box-shadow: compact(0 6px 12px rgba(0, 0, 0, 0.175), false, false, false, false, false, false, false, false, false);
+}
+
+.popover-element.popover-theme-arrows .popover-content:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-width: 8px;
+  border-style: solid;
+}
+
+.popover-element.popover-theme-arrows.popover-element-attached-bottom.popover-element-attached-center .popover-content {
+  margin-bottom: 8px;
+}
+
+.popover-element.popover-theme-arrows.popover-element-attached-bottom.popover-element-attached-center .popover-content:before {
+  top: 100%;
+  left: 50%;
+  margin-left: -8px;
+  border-top-color: #455a64;
+}
+
+.popover-element.popover-theme-arrows.popover-element-attached-top.popover-element-attached-center .popover-content {
+  margin-top: 8px;
+}
+
+.popover-element.popover-theme-arrows.popover-element-attached-top.popover-element-attached-center .popover-content:before {
+  bottom: 100%;
+  left: 50%;
+  margin-left: -8px;
+  border-bottom-color: #455a64;
+}
+
+.popover-element.popover-theme-arrows.popover-element-attached-right.popover-element-attached-middle .popover-content {
+  margin-right: 8px;
+}
+
+.popover-element.popover-theme-arrows.popover-element-attached-right.popover-element-attached-middle .popover-content:before {
+  left: 100%;
+  top: 50%;
+  margin-top: -8px;
+  border-left-color: #455a64;
+}
+
+.popover-element.popover-theme-arrows.popover-element-attached-left.popover-element-attached-middle .popover-content {
+  margin-left: 8px;
+}
+
+.popover-element.popover-theme-arrows.popover-element-attached-left.popover-element-attached-middle .popover-content:before {
+  right: 100%;
+  top: 50%;
+  margin-top: -8px;
+  border-right-color: #455a64;
+}
+
+.popover-element.popover-theme-arrows.popover-element-attached-top.popover-element-attached-left.popover-target-attached-bottom .popover-content {
+  margin-top: 8px;
+}
+
+.popover-element.popover-theme-arrows.popover-element-attached-top.popover-element-attached-left.popover-target-attached-bottom .popover-content:before {
+  bottom: 100%;
+  left: 8px;
+  border-bottom-color: #455a64;
+}
+
+.popover-element.popover-theme-arrows.popover-element-attached-top.popover-element-attached-right.popover-target-attached-bottom .popover-content {
+  margin-top: 8px;
+}
+
+.popover-element.popover-theme-arrows.popover-element-attached-top.popover-element-attached-right.popover-target-attached-bottom .popover-content:before {
+  bottom: 100%;
+  right: 8px;
+  border-bottom-color: #455a64;
+}
+
+.popover-element.popover-theme-arrows.popover-element-attached-bottom.popover-element-attached-left.popover-target-attached-top .popover-content {
+  margin-bottom: 8px;
+}
+
+.popover-element.popover-theme-arrows.popover-element-attached-bottom.popover-element-attached-left.popover-target-attached-top .popover-content:before {
+  top: 100%;
+  left: 8px;
+  border-top-color: #455a64;
+}
+
+.popover-element.popover-theme-arrows.popover-element-attached-bottom.popover-element-attached-right.popover-target-attached-top .popover-content {
+  margin-bottom: 8px;
+}
+
+.popover-element.popover-theme-arrows.popover-element-attached-bottom.popover-element-attached-right.popover-target-attached-top .popover-content:before {
+  top: 100%;
+  right: 8px;
+  border-top-color: #455a64;
+}
+
+.popover-element.popover-theme-arrows.popover-element-attached-top.popover-element-attached-right.popover-target-attached-left .popover-content {
+  margin-right: 8px;
+}
+
+.popover-element.popover-theme-arrows.popover-element-attached-top.popover-element-attached-right.popover-target-attached-left .popover-content:before {
+  top: 8px;
+  left: 100%;
+  border-left-color: #455a64;
+}
+
+.popover-element.popover-theme-arrows.popover-element-attached-top.popover-element-attached-left.popover-target-attached-right .popover-content {
+  margin-left: 8px;
+}
+
+.popover-element.popover-theme-arrows.popover-element-attached-top.popover-element-attached-left.popover-target-attached-right .popover-content:before {
+  top: 8px;
+  right: 100%;
+  border-right-color: #455a64;
+}
+
+.popover-element.popover-theme-arrows.popover-element-attached-bottom.popover-element-attached-right.popover-target-attached-left .popover-content {
+  margin-right: 8px;
+}
+
+.popover-element.popover-theme-arrows.popover-element-attached-bottom.popover-element-attached-right.popover-target-attached-left .popover-content:before {
+  bottom: 8px;
+  left: 100%;
+  border-left-color: #455a64;
+}
+
+.popover-element.popover-theme-arrows.popover-element-attached-bottom.popover-element-attached-left.popover-target-attached-right .popover-content {
+  margin-left: 8px;
+}
+
+.popover-element.popover-theme-arrows.popover-element-attached-bottom.popover-element-attached-left.popover-target-attached-right .popover-content:before {
+  bottom: 8px;
+  right: 100%;
+  border-right-color: #455a64;
+}
+
+.popover-element.popover-theme-arrows {
+  z-index: 1060;
+}
+
+.popover-element.popover-theme-arrows .popover-header {
+  padding: 0.6rem 0.6rem;
+  border-bottom: 1px solid #5a7582;
+}
+
+.popover-element.popover-theme-arrows .popover-body {
+  padding: 0.6rem 0.6rem;
+}
+
+.popover-element.popover-theme-arrows .popover-footer {
+  padding: 0.6rem 0.6rem;
+}
+
+.popover-numpad .popover-header input {
+  width: 20px;
+}
+
+.popover-numpad .popover-body {
+  width: 260px;
+}
+
+.popover-numpad .numpad-discount .numpad-body {
+  width: 322px;
+}
+
+.popover-numpad .numpad-cash .numpad-body {
+  width: 382px;
+}
+
+/**
+ * @name Variations Popover Spec
+ *
+ * @markup
+   <div class="popover-variations popover popover-theme-arrows popover-element popover-open popover-element-attached-top popover-element-attached-center">
+    <div class="popover-content">
+      <div class="popover-body">
+        <strong>Label</strong>
+        <div class="btn-group">
+          <button class="btn">Variant 1</button>
+          <button class="btn active">Variant 2</button>
+          <button class="btn">Variant 3</button>
+        </div>
+        <strong>Label</strong>
+        <select class="c-select">
+          <option>Variant 1</option>
+          <option>Variant 2</option>
+          <option>Variant 3</option>
+        </select>
+      </div>
+      <div class="popover-footer">
+        <button class="btn btn-success">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+ */
+.popover-variations strong {
+  display: block;
+}
+
+.popover-variations strong:not(:first-child) {
+  margin-top: 0.6rem;
+}
+
+.popover-variations select {
+  width: 100%;
+}
+
+.popover-variations button.active {
+  background-color: whitesmoke;
+}
+
+.popover-variations .popover-body {
+  min-width: 200px;
+  max-width: 280px;
+}
+
+.popover-variations .popover-footer button {
+  width: 100%;
+}
+
+/**
+ * @name Tables
+ *
+ * @state .table-sm Small Table
+ * @state .table-bordered Bordered Table
+ * @state .table-striped Striped Table
+ * @state .table-hover Hover Table
+ *
+ * @markup
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Cell</th>
+      <th>Cell</th>
+      <th>Cell</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+    </tr>
+  </tbody>
+</table>
+ */
+table {
+  font-size: 1rem;
+}
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1em;
+}
+
+.table th, .table td {
+  padding: 0.3rem 0.6rem;
+  line-height: 1.5;
+  vertical-align: top;
+  border-top: 1px solid #e8e8e8;
+}
+
+.modal .table th, .modal .table td {
+  border-top: 0;
+}
+
+.table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #e8e8e8;
+}
+
+.table tbody + tbody {
+  border-top: 2px solid #e8e8e8;
+}
+
+.table-sm th,
+.table-sm td {
+  padding: 0.3rem 0.3rem;
+}
+
+.table-bordered {
+  border: 1px solid #e8e8e8;
+}
+
+.table-bordered th,
+.table-bordered td {
+  border: 1px solid #e8e8e8;
+}
+
+.table-bordered thead th,
+.table-bordered thead td {
+  border-bottom-width: 2px;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #f9f9f9;
+}
+
+.table-hover tbody tr:hover, .table-hover tbody tr.pseudo-class-hover {
+  background-color: #ececec;
+}
+
+/**
+     * @name Tabs Spec
+     *
+     * @markup
+     * <ul class="tabs">
+     *  <li>Item 1</li>
+     *  <li class="active">Item 2</li>
+     *  <li>Item 3</li>
+     *  <li><i class="icon-plus"></i></li>
+     * </ul>
+     */
+.tabs {
+  background: #cfd8dc;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  *zoom: 1;
+}
+
+.tabs > li {
+  float: left;
+  background: #f3f3f3;
+  padding: 0.3rem 0.6rem;
+  margin: 0 1px 0 0;
+  cursor: pointer;
+  /**
+         * @name Removable Tabs Spec
+         *
+         * @markup
+         * <ul class="tabs">
+         *  <li><a href="#777" class="tab-remove"><i class="icon-times-circle"></i></a> Item 1</li>
+         *  <li class="active"><a href="#777" class="tab-remove"><i class="icon-times-circle"></i></a> Item 2</li>
+         *  <li><a href="#777" class="tab-remove"><i class="icon-times-circle"></i></a> Item 3</li>
+         * </ul>
+         */
+}
+
+.tabs > li.active {
+  background: #fff;
+}
+
+.tabs > li > .tab-remove {
+  color: #757575;
+}
+
+.tabs > li > .tab-remove:hover {
+  color: #f44336;
+}
+
+/**
+     * @name Infinite Tabs Spec
+     *
+     * @markup
+     * <div class="tabs-infinite" style="width:300px;">
+     *  <span><i class="icon-chevron-left"></i></span>
+     *  <ul class="tabs">
+     *    <li>Item 1</li>
+     *    <li class="active">Item 2</li>
+     *    <li>Item 3</li>
+     *    <li>Item 4</li>
+     *    <li>Item 5</li>
+     *    <li>Item 6</li>
+     *    <li>Item 7</li>
+     *    <li>Item 8</li>
+     *    <li>Item 9</li>
+     *    <li>Item ∞</li>
+     *  </ul>
+     *  <span><i class="icon-chevron-right"></i></span>
+     * </div>
+     */
+.tabs-infinite {
+  overflow-x: hidden;
+  position: relative;
+}
+
+.tabs-infinite > ul {
+  width: 2000px;
+}
+
+.tabs-infinite > span {
+  position: absolute;
+  top: 0;
+}
+
+.tabs-infinite > span:first-of-type {
+  left: 0;
+}
+
+.tabs-infinite > span:last-of-type {
+  right: 0;
+}
+
+/**
+     * @name Panel Tabs Spec
+     *
+     * @markup
+     *   <ul id="tabs">
+     *     <li>Left</li>
+     *     <li>Right</li>
+     *   </ul>
+     */
+#tabs li {
+  background: #d3cdc1;
+  width: 50%;
+  margin: 0;
+  text-align: center;
+}
+
+#tabs li.active {
+  background: #e8e5df;
+}
+
+@media (min-width: 768px) {
+  #tabs {
+    display: none;
+  }
+}
+
+/**
+ * @name Tooltip
+ *
+ * @markup
+ *   <div class="class="tooltip tooltip-theme-arrows tooltip-element tooltip-open tooltip-element-attached-bottom tooltip-element-attached-center"">
+ *     <div class="tooltip-content">Sed posuere consectetur est at lobortis.</div>
+ *   </div>
+ */
+.tooltip-element, .tooltip-element:after, .tooltip-element:before, .tooltip-element *, .tooltip-element *:after, .tooltip-element *:before {
+  box-sizing: border-box;
+}
+
+.tooltip-element {
+  position: absolute;
+  display: none;
+}
+
+.tooltip-element.tooltip-open {
+  display: block;
+}
+
+.tooltip-element.tooltip-theme-arrows {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.tooltip-element.tooltip-theme-arrows .tooltip-content {
+  border-radius: 3px;
+  position: relative;
+  font-family: inherit;
+  background: #000;
+  color: #fff;
+}
+
+.tooltip-element.tooltip-theme-arrows .tooltip-content:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-width: 5px;
+  border-style: solid;
+}
+
+.tooltip-element.tooltip-theme-arrows.tooltip-element-attached-bottom.tooltip-element-attached-center .tooltip-content {
+  margin-bottom: 5px;
+}
+
+.tooltip-element.tooltip-theme-arrows.tooltip-element-attached-bottom.tooltip-element-attached-center .tooltip-content:before {
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-top-color: #000;
+}
+
+.tooltip-element.tooltip-theme-arrows.tooltip-element-attached-top.tooltip-element-attached-center .tooltip-content {
+  margin-top: 5px;
+}
+
+.tooltip-element.tooltip-theme-arrows.tooltip-element-attached-top.tooltip-element-attached-center .tooltip-content:before {
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-bottom-color: #000;
+}
+
+.tooltip-element.tooltip-theme-arrows.tooltip-element-attached-right.tooltip-element-attached-middle .tooltip-content {
+  margin-right: 5px;
+}
+
+.tooltip-element.tooltip-theme-arrows.tooltip-element-attached-right.tooltip-element-attached-middle .tooltip-content:before {
+  left: 100%;
+  top: 50%;
+  margin-top: -5px;
+  border-left-color: #000;
+}
+
+.tooltip-element.tooltip-theme-arrows.tooltip-element-attached-left.tooltip-element-attached-middle .tooltip-content {
+  margin-left: 5px;
+}
+
+.tooltip-element.tooltip-theme-arrows.tooltip-element-attached-left.tooltip-element-attached-middle .tooltip-content:before {
+  right: 100%;
+  top: 50%;
+  margin-top: -5px;
+  border-right-color: #000;
+}
+
+.tooltip-element.tooltip-theme-arrows.tooltip-element-attached-top.tooltip-element-attached-left.tooltip-target-attached-bottom .tooltip-content {
+  margin-top: 5px;
+}
+
+.tooltip-element.tooltip-theme-arrows.tooltip-element-attached-top.tooltip-element-attached-left.tooltip-target-attached-bottom .tooltip-content:before {
+  bottom: 100%;
+  left: 5px;
+  border-bottom-color: #000;
+}
+
+.tooltip-element.tooltip-theme-arrows.tooltip-element-attached-top.tooltip-element-attached-right.tooltip-target-attached-bottom .tooltip-content {
+  margin-top: 5px;
+}
+
+.tooltip-element.tooltip-theme-arrows.tooltip-element-attached-top.tooltip-element-attached-right.tooltip-target-attached-bottom .tooltip-content:before {
+  bottom: 100%;
+  right: 5px;
+  border-bottom-color: #000;
+}
+
+.tooltip-element.tooltip-theme-arrows.tooltip-element-attached-bottom.tooltip-element-attached-left.tooltip-target-attached-top .tooltip-content {
+  margin-bottom: 5px;
+}
+
+.tooltip-element.tooltip-theme-arrows.tooltip-element-attached-bottom.tooltip-element-attached-left.tooltip-target-attached-top .tooltip-content:before {
+  top: 100%;
+  left: 5px;
+  border-top-color: #000;
+}
+
+.tooltip-element.tooltip-theme-arrows.tooltip-element-attached-bottom.tooltip-element-attached-right.tooltip-target-attached-top .tooltip-content {
+  margin-bottom: 5px;
+}
+
+.tooltip-element.tooltip-theme-arrows.tooltip-element-attached-bottom.tooltip-element-attached-right.tooltip-target-attached-top .tooltip-content:before {
+  top: 100%;
+  right: 5px;
+  border-top-color: #000;
+}
+
+.tooltip-element.tooltip-theme-arrows.tooltip-element-attached-top.tooltip-element-attached-right.tooltip-target-attached-left .tooltip-content {
+  margin-right: 5px;
+}
+
+.tooltip-element.tooltip-theme-arrows.tooltip-element-attached-top.tooltip-element-attached-right.tooltip-target-attached-left .tooltip-content:before {
+  top: 5px;
+  left: 100%;
+  border-left-color: #000;
+}
+
+.tooltip-element.tooltip-theme-arrows.tooltip-element-attached-top.tooltip-element-attached-left.tooltip-target-attached-right .tooltip-content {
+  margin-left: 5px;
+}
+
+.tooltip-element.tooltip-theme-arrows.tooltip-element-attached-top.tooltip-element-attached-left.tooltip-target-attached-right .tooltip-content:before {
+  top: 5px;
+  right: 100%;
+  border-right-color: #000;
+}
+
+.tooltip-element.tooltip-theme-arrows.tooltip-element-attached-bottom.tooltip-element-attached-right.tooltip-target-attached-left .tooltip-content {
+  margin-right: 5px;
+}
+
+.tooltip-element.tooltip-theme-arrows.tooltip-element-attached-bottom.tooltip-element-attached-right.tooltip-target-attached-left .tooltip-content:before {
+  bottom: 5px;
+  left: 100%;
+  border-left-color: #000;
+}
+
+.tooltip-element.tooltip-theme-arrows.tooltip-element-attached-bottom.tooltip-element-attached-left.tooltip-target-attached-right .tooltip-content {
+  margin-left: 5px;
+}
+
+.tooltip-element.tooltip-theme-arrows.tooltip-element-attached-bottom.tooltip-element-attached-left.tooltip-target-attached-right .tooltip-content:before {
+  bottom: 5px;
+  right: 100%;
+  border-right-color: #000;
+}
+
+.tooltip-element.tooltip-theme-arrows {
+  z-index: 1070;
+  opacity: 0.9;
+  max-width: 200px;
+}
+
+.tooltip-element.tooltip-theme-arrows .tooltip-content {
+  padding: 0.3rem 0.6rem;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+/**
+ * @name Headings
+ *
+ * @markup
+ *   <h1>Heading 1</h1>
+ *   <h2>Heading 2</h2>
+ *   <h3>Heading 3</h3>
+ *   <h4>Heading 4</h4>
+ *   <h5>Heading 5</h5>
+ *   <h6>Heading 6</h6>
+ */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Open Sans", Sans-Serif;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+}
+
+h1, .h1 {
+  font-size: 2.5rem;
+}
+
+h2, .h2 {
+  font-size: 2rem;
+}
+
+h3, .h3 {
+  font-size: 1.75rem;
+}
+
+h4, .h4 {
+  font-size: 1.5rem;
+}
+
+h5, .h5 {
+  font-size: 1.25rem;
+}
+
+h6, .h6 {
+  font-size: 1rem;
+}
+
+/**
+ * @name Links
+ *
+ * @state :hover - Hover state
+ * @state :active - Active state
+ * @state :focus - Focus state
+ *
+ * @markup
+ *   <a href="#777">Hyperlink</a>
+ */
+a {
+  color: #607d8b;
+  text-decoration: underline;
+  -webkit-transition: compact(compact(all 0.2s ease-in-out, false, false, false, false, false, false, false, false, false) false false);
+  -moz-transition: compact(compact(all 0.2s ease-in-out, false, false, false, false, false, false, false, false, false) false false false);
+  -o-transition: compact(compact(all 0.2s ease-in-out, false, false, false, false, false, false, false, false, false) false false false);
+  transition: compact(all 0.2s ease-in-out, false, false, false, false, false, false, false, false, false);
+}
+
+a:focus, a.pseudo-class-focus, a:hover, a.pseudo-class-hover {
+  color: #41545e;
+  text-decoration: none;
+}
+
+a:focus,
+a .pseudo-class-focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+small,
+.small {
+  font-size: 0.85rem;
+}
+
+/**
+ * @name Text
+ *
+ * @state .text-left - Align left
+ * @state .text-right - Align right
+ * @state .text-center - Centered
+ * @state .text-justify - Justified
+ * @state .text-nowrap - No wrap
+ * @state .text-lowercase - Lowercase
+ * @state .text-uppercase - Uppercase
+ * @state .text-capitalize - Capitalize
+ * @state .text-primary - Primary
+ * @state .text-success - Success
+ * @state .text-info - Info
+ * @state .text-warning - Warning
+ * @state .text-danger - Danger
+ *
+ * @markup
+ *   <p>Text helpers</p>
+ */
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.text-primary {
+  color: #607d8b;
+}
+
+a.text-primary:focus, a.text-primary.pseudo-class-focus, a.text-primary:hover, a.text-primary.pseudo-class-hover {
+  color: #4b626d;
+}
+
+.text-success {
+  color: #3c763d;
+}
+
+a.text-success:focus, a.text-success.pseudo-class-focus, a.text-success:hover, a.text-success.pseudo-class-hover {
+  color: #2b542c;
+}
+
+.text-info {
+  color: #31708f;
+}
+
+a.text-info:focus, a.text-info.pseudo-class-focus, a.text-info:hover, a.text-info.pseudo-class-hover {
+  color: #245269;
+}
+
+.text-warning {
+  color: #8a6d3b;
+}
+
+a.text-warning:focus, a.text-warning.pseudo-class-focus, a.text-warning:hover, a.text-warning.pseudo-class-hover {
+  color: #66512c;
+}
+
+.text-danger {
+  color: #a94442;
+}
+
+a.text-danger:focus, a.text-danger.pseudo-class-focus, a.text-danger:hover, a.text-danger.pseudo-class-hover {
+  color: #843534;
+}
+
+.text-error {
+  color: #a94442;
+}
+
+a.text-error:focus, a.text-error.pseudo-class-focus, a.text-error:hover, a.text-error.pseudo-class-hover {
+  color: #843534;
+}
+
+/**
+ * @name Horizontal Rule
+ *
+ * @markup
+ *   <hr>
+ */
+hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/**
+     * @name Cart Header
+     *
+     * @markup
+     *   <div class="list-header cart cart-header">
+     *     <div class="qty">Qty</div>
+     *     <div class="title">Title</div>
+     *     <div class="price">Price</div>
+     *     <div class="total">Total</div>
+     *     <div class="action">Action</div>
+     *   </div>
+     */
+.cart .qty {
+  -webkit-box-flex: 0;
+  -moz-box-flex: 0;
+  box-flex: 0;
+  -webkit-flex: 0 1 15%;
+  -moz-flex: 0 1 15%;
+  -ms-flex: 0 1 15%;
+  flex: 0 1 15%;
+}
+
+.cart .title {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.cart .price {
+  text-align: right;
+  -webkit-box-flex: 0;
+  -moz-box-flex: 0;
+  box-flex: 0;
+  -webkit-flex: 0 1 20%;
+  -moz-flex: 0 1 20%;
+  -ms-flex: 0 1 20%;
+  flex: 0 1 20%;
+}
+
+.cart .total {
+  text-align: right;
+  -webkit-box-flex: 0;
+  -moz-box-flex: 0;
+  box-flex: 0;
+  -webkit-flex: 0 1 20%;
+  -moz-flex: 0 1 20%;
+  -ms-flex: 0 1 20%;
+  flex: 0 1 20%;
+}
+
+.cart .action {
+  -webkit-box-flex: 0;
+  -moz-box-flex: 0;
+  box-flex: 0;
+  -webkit-flex: 0 1 48px;
+  -moz-flex: 0 1 48px;
+  -ms-flex: 0 1 48px;
+  flex: 0 1 48px;
+}
+
+.cart-empty .cart-totals,
+.cart-empty .cart-customer,
+.cart-empty .cart-actions,
+.cart-empty .cart-notes {
+  display: none;
+}
+
+/**
+     * @name Cart List
+     *
+     * @markup
+     *   <div class="list cart-list">
+     *     <ul>
+     *       <li class="simple">Simple</li>
+     *       <li class="variation">Variable</li>
+     *       <li class="Shipping">Shipping</li>
+     *       <li class="fee">Fee</li>
+     *       <li class="empty">Empty</li>
+     *     </ul>
+     *   </div>
+     */
+.cart-list li.shipping, .cart-list li.fee {
+  border-top: 1px solid #e8e8e8;
+}
+
+.cart-list li.shipping ~ li.shipping, .cart-list li.fee ~ li.fee {
+  border-top: none;
+}
+
+.cart-list .pulse-in {
+  background: #d9eeda;
+}
+
+.cart-list .pulse-out {
+  background: #fccbc7;
+}
+
+.cart-list .action a {
+  color: #f44336;
+}
+
+.cart-list .action a:hover {
+  color: #ea1c0d;
+}
+
+/**
+     * @name Cart Item
+     *
+     * @markup
+     *   <div class="list-item cart-item">
+     *     <div> <!-- Marionette region -->
+     *       <div class="qty">
+     *         <input type=text">
+     *       </div>
+     *       <div class="title">
+     *         <strong contenteditable="true">Line Item</strong>
+     *         <dl class="meta">
+     *           <dt>Key:</dt>
+     *           <dd>Value</dd>
+     *           <dt>Key:</dt>
+     *           <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</dd>
+     *         </dl>
+     *         <a href="#777" class="btn btn-circle-sm">
+     *           <i class="icon-angle-down"></i>
+     *         </a>
+     *       </div>
+     *       <div class="price">
+     *         <input class="form-control" type=text">
+     *       </div>
+     *       <div class="total">
+     *         $30.00
+     *       </div>
+     *       <div class="action">
+     *         <a href="#777" class="btn btn-circle btn-danger">
+     *           <i class="icon-times icon-lg"></i>
+     *         </a>
+     *       </div>
+     *     </div>
+     *   </div>
+     */
+.cart-item .title {
+  position: relative;
+}
+
+.cart-item .title strong {
+  word-wrap: break-word;
+  display: inline-block;
+}
+
+.cart-item .title a {
+  position: absolute;
+  top: 50%;
+  margin-top: -11px;
+  right: -11px;
+}
+
+.cart-item .title a i {
+  -webkit-transition: compact(compact(compact(transform 0.4s false false), false, false, false, false, false, false, false, false, false) false false);
+  -moz-transition: compact(compact(compact(transform 0.4s false false), false, false, false, false, false, false, false, false, false) false false false);
+  -o-transition: compact(compact(compact(transform 0.4s false false), false, false, false, false, false, false, false, false, false) false false false);
+  transition: compact(compact(transform 0.4s false false), false, false, false, false, false, false, false, false, false);
+}
+
+.drawer-open .cart-item .title a i {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+/**
+     * @name Cart Item Drawer
+     *
+     * @markup
+     *   <div class="list-drawer cart-drawer">
+     *     <div>
+     *       <div class="list-row">
+     *         <div>Cell</div>
+     *         <div>Cell<br>New Line<br>New Line</div>
+     *       </div>
+     *       <div class="list-row">
+     *         <div>Cell</div>
+     *         <div>Cell<br>New Line<br>New Line</div>
+     *       </div>
+     *     </div>
+     *   </div>
+     */
+.cart-drawer .list-row > div:first-of-type {
+  -webkit-box-flex: 0;
+  -moz-box-flex: 0;
+  box-flex: 0;
+  -webkit-flex: 0 1 40%;
+  -moz-flex: 0 1 40%;
+  -ms-flex: 0 1 40%;
+  flex: 0 1 40%;
+  text-align: right;
+}
+
+.cart-drawer .list-row > div:last-of-type > span {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.cart-drawer .list-row > div:last-of-type > span input, .cart-drawer .list-row > div:last-of-type > span textarea {
+  margin-bottom: 0.6rem;
+}
+
+.cart-drawer .list-row > div:last-of-type > span input {
+  width: 80%;
+}
+
+.cart-drawer .list-row > div:last-of-type > span a {
+  position: absolute;
+  top: 0;
+  right: 0.6rem;
+}
+
+/**
+     * @name Cart Totals
+     */
+.cart-totals .order-total {
+  font-size: 1.4em;
+}
+
+/**
+     * @name Cart Customer
+     */
+.cart-customer {
+  background: #fff;
+  border-top: 2px solid #dbdbdb;
+}
+
+.cart-notes {
+  background: #fff;
+}
+
+.cart-notes > div {
+  border-top: 2px solid #dbdbdb;
+  padding: 0.6rem 0.6rem;
+}
+
+/**
+     *
+     */
+.checkout-status .fail {
+  background-color: #e53935;
+}
+
+.checkout-status a {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/**
+     *
+     */
+.checkout-list li .gateway {
+  color: #607d8b;
+  background: #dbdbdb;
+}
+
+.checkout-list li .gateway:hover {
+  color: #455a64;
+}
+
+.checkout-list li .gateway h5 {
+  padding: 0.6rem 0.6rem;
+  margin: 0;
+  cursor: pointer;
+}
+
+.checkout-list li .gateway h5 img {
+  max-height: 25px;
+  vertical-align: middle;
+  margin-left: 0.6rem;
+}
+
+.checkout-list li .drawer > div {
+  padding: 0.6rem 0.6rem;
+}
+
+.checkout-list li .drawer > div fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.checkout-list li .drawer > div .form-row {
+  overflow: hidden;
+  *zoom: 1;
+}
+
+.checkout-list li .drawer > div .form-row label {
+  float: left;
+  margin-right: 0.6rem;
+  line-height: 2.4;
+}
+
+.checkout-list li.active .gateway {
+  color: rgba(255, 255, 255, 0.9);
+  background: #4caf50;
+}
+
+.checkout-list li.empty p {
+  padding: 0.6rem 0.6rem;
+  margin: 0;
+}
+
+.print-preview {
+  max-width: 210mm;
+  margin: 0 auto;
+}
+
+.print-preview-iframe {
+  overflow: hidden;
+}
+
+.print-preview-iframe iframe {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #e8e8e8;
+}
+
+.print-preview-actions {
+  text-align: right;
+  padding: 0.6rem 0.6rem;
+}
+
+.products .close-all {
+  display: none;
+}
+
+.products .drawer-open .close-all {
+  display: block;
+}
+
+.products .drawer-open .expand-all {
+  display: none;
+}
+
+/**
+     * @name Products Item
+     *
+     * @markup
+     *   <div class="products">
+     *     <div class="list-item products-item">
+     *       <div> <!-- Marionette region -->
+     *         <div class="img">
+     *           <img src="http://demo.woopos.com.au/wp-content/plugins/woocommerce/assets/images/placeholder.png">
+     *         </div>
+     *         <div class="title">
+     *           <strong>Product Title</strong>
+     *           <i class="icon-info-circle" data-toggle="tooltip" title="Product Attributes"></i>
+     *           <dl>
+     *             <dt>Variation:</dt>
+     *             <dd><a href="#777">Variant</a>, <a href="#777">Variant</a></dd>
+     *             <dt>Variation:</dt>
+     *             <dd><a href="#777">Variant</a>, <a href="#777">Variant</a>, <a href="#777">Variant</a></dd>
+     *             <dt></dt>
+     *             <dd><a class="expand-all" href="#777">Expand all</a> <a class="close-all" href="#777">Close all</a></dd>
+     *           </dl>
+     *           <small>3 in stock</small>
+     *         </div>
+     *         <div class="price">
+     *           $30.00
+     *         </div>
+     *         <div class="action">
+     *           <a href="#777" class="btn btn-circle btn-success">
+     *             <i class="icon-chevron-right icon-lg"></i>
+     *           </a>
+     *         </div>
+     *       </div>
+     *     </div>
+     *   </div>
+     */
+.products-list .img {
+  -webkit-box-flex: 0;
+  -moz-box-flex: 0;
+  box-flex: 0;
+  -webkit-flex: 0 1 20%;
+  -moz-flex: 0 1 20%;
+  -ms-flex: 0 1 20%;
+  flex: 0 1 20%;
+}
+
+.products-list .img img {
+  width: 100%;
+  max-width: 90px;
+}
+
+.products-list .title {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.products-list .title small {
+  display: block;
+}
+
+.products-list .title ul.variations, .products-list .title ul.variant {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+.products-list .title ul.variations strong, .products-list .title ul.variant strong {
+  font-weight: 600;
+}
+
+.products-list .title ul.variations a.active, .products-list .title ul.variant a.active {
+  color: #212121;
+  text-decoration: none;
+  cursor: default;
+}
+
+.products-list .price {
+  -webkit-box-flex: 0;
+  -moz-box-flex: 0;
+  box-flex: 0;
+  -webkit-flex: 0 1 20%;
+  -moz-flex: 0 1 20%;
+  -ms-flex: 0 1 20%;
+  flex: 0 1 20%;
+}
+
+.products-list .action {
+  -webkit-box-flex: 0;
+  -moz-box-flex: 0;
+  box-flex: 0;
+  -webkit-flex: 0 1 48px;
+  -moz-flex: 0 1 48px;
+  -ms-flex: 0 1 48px;
+  flex: 0 1 48px;
+}
+
+.products-list .action a {
+  display: block;
+  color: #4caf50;
+}
+
+.products-list .action a:hover {
+  color: #3d8b40;
+}
+
+/**
+     *
+     */
+.receipt .qty {
+  -webkit-box-flex: 0;
+  -moz-box-flex: 0;
+  box-flex: 0;
+  -webkit-flex: 0 1 15%;
+  -moz-flex: 0 1 15%;
+  -ms-flex: 0 1 15%;
+  flex: 0 1 15%;
+}
+
+.receipt .title {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.receipt .price {
+  text-align: right;
+  -webkit-box-flex: 0;
+  -moz-box-flex: 0;
+  box-flex: 0;
+  -webkit-flex: 0 1 20%;
+  -moz-flex: 0 1 20%;
+  -ms-flex: 0 1 20%;
+  flex: 0 1 20%;
+}
+
+.receipt .total {
+  text-align: right;
+  -webkit-box-flex: 0;
+  -moz-box-flex: 0;
+  box-flex: 0;
+  -webkit-flex: 0 1 20%;
+  -moz-flex: 0 1 20%;
+  -ms-flex: 0 1 20%;
+  flex: 0 1 20%;
+}
+
+.receipt .action {
+  -webkit-box-flex: 0;
+  -moz-box-flex: 0;
+  box-flex: 0;
+  -webkit-flex: 0 1 52px;
+  -moz-flex: 0 1 52px;
+  -ms-flex: 0 1 52px;
+  flex: 0 1 52px;
+}
+
+/**
+     *
+     */
+.receipt-status .paid {
+  background-color: #4caf50;
+}
+
+.receipt-status .unpaid {
+  background-color: #ff9800;
+}
+
+.receipt-status a {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.support .label {
+  -webkit-box-flex: 0;
+  -moz-box-flex: 0;
+  box-flex: 0;
+  -webkit-flex: 0 1 25%;
+  -moz-flex: 0 1 25%;
+  -ms-flex: 0 1 25%;
+  flex: 0 1 25%;
+}
+
+.support .input[placeholder]:empty:before {
+  content: attr(placeholder);
+}
+
+.support .input[placeholder]:empty:focus:before {
+  content: "";
+}
+
+.support textarea {
+  height: 100px;
+}
+
+.status .result {
+  -webkit-box-flex: 0;
+  -moz-box-flex: 0;
+  box-flex: 0;
+  -webkit-flex: 0 1 10%;
+  -moz-flex: 0 1 10%;
+  -ms-flex: 0 1 10%;
+  flex: 0 1 10%;
+}
+
+.status .title {
+  -webkit-box-flex: 0;
+  -moz-box-flex: 0;
+  box-flex: 0;
+  -webkit-flex: 0 1 25%;
+  -moz-flex: 0 1 25%;
+  -ms-flex: 0 1 25%;
+  flex: 0 1 25%;
+  font-weight: 400;
+}
+
+/*# sourceMappingURL=pos.css.map */

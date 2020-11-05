@@ -1,0 +1,112 @@
+var Service = require('lib/config/service');
+var hbs = require('handlebars');
+var $ = require('jquery');
+var _ = require('lodash');
+var debug = require('debug')('print');
+var Radio = require('backbone.radio');
+var App = require('lib/config/application');
+
+module.exports = Service.extend({
+  channelName: 'print',
+
+  initialize: function(){
+    _.bindAll(this, 'mediaQueryListener', 'beforePrint', 'afterPrint');
+    this.start();
+  },
+
+  onStart: function(){
+    this.channel.reply({
+      'print' : this.print
+    }, this);
+  },
+
+  onStop: function(){
+    this.channel.reset();
+  },
+
+  /* jshint -W071 */
+  print: function(options){
+    var template = this.template(options),
+        iframe = this.init();
+
+    this.deferred = $.Deferred();
+
+    // insert template
+    iframe.document.open();
+    iframe.document.write(template);
+    iframe.document.close();
+
+    // print once loaded
+    var loaded = function(){
+      iframe.focus(); // required for IE
+      iframe.print();
+    };
+
+    // get the first image, ie: logo
+    var logo = iframe.document.getElementsByTagName('img')[0];
+
+    if( logo ){
+      logo.onload = loaded;
+    } else {
+      loaded();
+    }
+
+    return this.deferred;
+  },
+  /* jshint +W071 */
+
+  /**
+   * creates an iframe and stores reference
+   * returns a reference to the iframe window
+   */
+  init: function(){
+
+    // print events for Chrome 9+ & Safari 5.1+
+    if (frames['iframe'].matchMedia) {
+      var mediaQueryList = frames['iframe'].matchMedia('print');
+      mediaQueryList.addListener(this.mediaQueryListener);
+    }
+
+    return frames['iframe'];
+  },
+
+  mediaQueryListener: function(mql){
+    if (mql.matches) {
+      this.beforePrint();
+    } else {
+      // delay fixes weird behavior
+      // mediaQueryList seems to trigger both events on init
+      _.delay(this.afterPrint);
+    }
+  },
+
+  beforePrint: function(){
+    debug('printing ...');
+  },
+
+  afterPrint: function(){
+    debug('printing finished');
+    this.deferred.resolve();
+  },
+
+  /* jshint -W074 */
+  /* todo: refactor print service with view */
+  template: function(options){
+    options = options || {};
+
+    if(!options.model){
+      return;
+    }
+
+    var tax = Radio.request('entities', 'get', {
+        type: 'option',
+        name: 'tax'
+      }) || {};
+    var ReceiptView = App.prototype.ReceiptView.prototype;
+    var data = ReceiptView.prepare( options.model.toJSON(), tax );
+    var template = _.get(hbs.Templates, ['print', 'receipt'], '');
+    return hbs.compile( template )( data );
+  }
+  /* jshint +W074 */
+
+});

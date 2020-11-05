@@ -1,0 +1,6 @@
+.woocommerce_stripe_terminal_reader_init{
+	outline: 0 !important;
+	&.selected{
+		border: 3px solid nth($paletteGreen, 6) !important;
+	}
+}

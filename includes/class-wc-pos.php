@@ -1,0 +1,108 @@
+<?php
+
+/**
+ * The main POS Class
+ *
+ * @class	WC_POS
+ * @package	WooCommerce POS
+ * @author	Paul Kilmurray <paul@kilbot.com.au>
+ * @link	http://www.woopos.com.au
+ */
+
+class WC_POS {
+
+	/**
+	 * Constructor
+	 */
+	public function __construct() {
+
+		// auto load classes
+		if ( function_exists( 'spl_autoload_register' ) ) {
+			spl_autoload_register( array( $this, 'autoload' ) );
+		}
+
+		add_action( 'init', array( $this, 'init' ) );
+		add_action( 'woocommerce_api_loaded', array( $this, 'load_woocommerce_api_patches') );
+		add_action( 'rest_api_init', array( $this, 'load_woocommerce_apiv2_patches') );
+
+		// emails filter called very early :(
+		add_filter( 'woocommerce_defer_transactional_emails', array( $this, 'defer_transactional_emails' ) );
+
+		do_action( 'woocommerce_pos_loaded' );
+
+	}
+
+	/**
+	 * Autoload classes + pseudo namespacing
+	 * turns WC_POS_i18n into includes/class-wc-pos-i18n.php and
+	 * WC_POS_Admin_Settings into includes/admin/class-wc-pos-settings.php
+	 *
+	 * @param $class
+	 */
+	private function autoload( $class ) {
+		$cn = preg_replace( '/^wc_pos_/', '', strtolower( $class ), 1, $count );
+		if( $count ) {
+			$path = explode('_', $cn);
+			if( $path[0] == 'pro' ) return;
+			$last = 'class-wc-pos-'. array_pop( $path ) .'.php';
+			array_push( $path, $last );
+			$file = WC_POS_PLUGIN_PATH . 'includes/' . implode( '/', $path );
+			if( is_readable( $file ) )
+				require_once $file;
+		}
+	}
+
+	/**
+	 * Load the required resources
+	 */
+	public function init() {
+
+		// global helper functions
+		require_once WC_POS_PLUGIN_PATH . 'includes/wc-pos-functions.php';
+
+		// global classes
+		new WC_POS_i18n();
+		new WC_POS_Gateways();
+		new WC_POS_Products();
+		new WC_POS_Template();
+		new WC_POS_Customers();
+
+		// end global classes
+		if( !is_admin() )
+			return;
+
+		// ajax only
+		if( defined('DOING_AJAX') && DOING_AJAX ){
+			new WC_POS_Settings();
+			new WC_POS_AJAX();
+		}
+
+		// admin only
+		else {
+			new WC_POS_Admin();
+		}
+
+	}
+
+	public function load_woocommerce_api_patches(){
+		new WC_POS_API();
+	}
+
+	public function load_woocommerce_apiv2_patches(){
+		new WC_POS_APIv2();
+	}
+
+	/**
+	 * Don't defer emails for POS orders
+	 *
+	 * @param $defer
+	 * @return bool
+	 */
+	public function defer_transactional_emails( $defer ) {
+		if( is_pos() ) {
+			return false;
+		}
+		return $defer;
+	}
+
+}
